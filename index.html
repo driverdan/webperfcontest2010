@@ -18,7 +18,6 @@
 	}
 	</script>
 	<script src="jquery.js"></script>
-	<script src="jquery.lazyload.min.js"></script>
 	<script src="jquery.autocomplete.js"></script>
 	<script src="jquery.bgiframe.min.js"></script>
 	<script src="jquery.ajaxQueue.js"></script>
@@ -26,11 +25,6 @@
 	<script src="master.js"></script>
 	<script>
 	$(function() {
-		$("img").lazyload({
-			placeholder: "white.gif"
-			,effect: "fadeIn"
-		});
-		
 		$("#SCat").change( function() {
 			$("#Fnac_Search").flushCache();
 			var ComboVal = $("#SCat").val();
