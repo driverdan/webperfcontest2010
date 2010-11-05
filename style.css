@@ -887,10 +887,6 @@ body.adherents #subfooter a{
 {
   background:url(navn2_background.png) no-repeat left top;
 }
-/*body.enfants #navigation .header .topleft, body.enfants #navigation .header, body.enfants #navigation .header h2, body.enfants #navigation .bottom, body.enfants #navigation .bottom div
-{
- background:url(/Img/v2/skin/navn3_background.png) no-repeat left top;
-}*/
 #navigation .header, #navigation .bottom , .navigation .header, .navigation .bottom, body.enfants #navigation .header, body.enfants #navigation .bottom{
   padding:0 0 0 14px;
 }
@@ -917,7 +913,6 @@ body.adherents #subfooter a{
 #navigation .bottom, .navigation .bottom {
   background-position:0 -150px;
 }
-/*body.enfants #navigation .bottom { background-position:0 -152px; }*/
 #navigation .bottom div,.navigation .bottom div, body.enfants #navigation .bottom div {
   background-position:right -150px;
   padding:25px 0 0 0;
@@ -937,12 +932,6 @@ body.adherents #subfooter a{
   border-width:0 1px;
   padding-top:5px;
 }
-/*body.enfants #navigation .arboListe{
-  border:none;
-}
-body.enfants #navigation .arboListe .moutarde{
-  color:#FFF!important;
-}*/
 
 
 #navigation .arboActu dl, #navigation .arboListe dl, #navigation .arboActu ul, #navigation .arboListe ul {
@@ -986,9 +975,7 @@ body.enfants #navigation .arboListe .moutarde{
 }
 
 body.enfants #navigation dl, body.enfants #navigation ul{
-  /*background-color:#d545ff; /* mauve */
   padding:0 12px; /*lot2 :update */
-  /*color:#fff; /* blanc */
 }
 #navigation ul,.navigation ul{
   list-style-type:none;
@@ -999,7 +986,6 @@ body.enfants #navigation dl, body.enfants #navigation ul{
   text-decoration:none;
 }
 body.enfants #navigation dd a, body.enfants #navigation ul a {
- /*color:#fff; /* gris foncé */
  text-decoration:none;
 }
 #navigation dl a:hover, #navigation li a:hover, .navigation dl a:hover, .navigation li a:hover, body.enfants #navigation dd a:hover, body.enfants #navigation  li a:hover {
@@ -1150,17 +1136,14 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement d
   margin:0 auto;
 }
 .produit dt, .contact dt{
-  /*line-height:0.9em;*/
   font-weight:bold;
   font-size:1.1em;
 }
 .produit dt, .produit dt a{
   color:#666; /* gris foncé */
-/*  text-decoration:none; TOUSSI */
 }
 .contact dt, .contact dt a{
   color:#DE9C00; /* moutarde */
-/*  text-decoration:none; TOUSSI */
 }
 .produit *, .contact *{
   margin:0;
@@ -1404,10 +1387,6 @@ dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
 .slim_block .listeproduits li, .slim_block .block .listeproduits li{ /* lot2 :update */
   padding:2px 0;
   _zoom:1;
-}
-.listeproduits .produit dd, .listeproduits .produit dt{ /* pour eviter de generaliser le padding */
-/*   padding-left:0;
-  padding-right:0; */
 }
 #col_gauche .listeproduits li, #col_droite .listeproduits li{
   padding:4px 0;
@@ -1868,7 +1847,6 @@ color:#DA9914 !important;
 .font0-8{
 	font-size:0.8em !important;
 }
-
 .fontnormal{
   font-weight:normal !important;
 }
@@ -1884,7 +1862,6 @@ color:#DA9914 !important;
 .fontbiggerplus{
   font-size:1.5em !important;
 }
-
 
 
 /****************
@@ -2314,9 +2291,6 @@ background-position: right top;
 .mise_en_avant .sep{
   border-bottom-color:#FFF; /* blanc */
 }
-.mise_en_avant .links li{
-/*padding:0; c'est doutueux, j'en ai eu besoin et plus maintenant, je la garde sous le coude au cas ou */
-}
 .brd_noir .tl, .brd_noir .tr, .brd_noir .bl, .brd_noir .br{
   background-image:url(corner_noir_gris.png)!important;
 }
@@ -2369,7 +2343,6 @@ background-position: right top;
   margin:0 auto;
   padding:8px 0;
   width:47px;/*provisoire*/
-  /*height:47px;provisoire*/
 }
 .cadre_produit .number{
   border:solid 1px;
@@ -2569,7 +2542,6 @@ background-image:url(block_rouge_corner_trans.png);
 .block_jaune_mea .sep{
   border-bottom-color:#FFF; /* blanc */
 }
-/* 2009-04-27 */
 .block_jaune .cadre_produit .number, .block_noir .cadre_produit .number span {
 	background:#fff none repeat scroll 0% 50%;
 	color:#FFFFFF;
@@ -2688,7 +2660,6 @@ background-image:url(block_cadre_prod_jaune_corner.png);
 .block_orange_mea .sep{
   border-bottom-color:#FFF; /* blanc */
 }
-/* 2009-04-27 */
 .block_orange .cadre_produit .number, .block_noir .cadre_produit .number span {
 	background:#fff none repeat scroll 0% 50%;
 	color:#FFFFFF;
@@ -2739,7 +2710,6 @@ background-image:url(block_cadre_prod_orange_corner.png);
 .block_noir .blk_content{
   border-top:solid 1px #333333; /* gris tres fonce */
 }
-/* 2009-04-27 */
 .block_noir .cadre_produit .number, .block_noir .cadre_produit .number span {
 	background:#fff none repeat scroll 0% 50%;
 	color:#FFFFFF;
@@ -2914,10 +2884,6 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_blanc .blk_header, .block_blanc .blk_header span, .block_blanc .blk_header a{
   color:#666; /* gris */
   background-color:#FFF; /* blanc */
-/*background-image:url(/Img/v2/skin/blocks/block_blanc_header.png); */
-}
-.block_blanc .flat .blk_header, .block_blanc .flat .blk_header span, .block_blanc .flat .blk_header a{
-  /* background-image:url(/Img/v2/skin/blocks/block_blanc_flat_header.png); */
 }
 .block_blanc .tl, .block_blanc .tr, .block_blanc .bl, .block_blanc .br{
   background-image:url(block_blanc_corners.png);
@@ -3013,8 +2979,6 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_bleu_mp .blk_inside{
   border:1px solid #CCC; /* gris */
 }
-
-
 
 /* ======= block_espace-fg (fnac gaming: violet - mauve) =======*/
 
@@ -3929,7 +3893,6 @@ div.event{
 
 body.popUpCredit{
   max-width:800px;
-  /*background-position:0px -66px; suite refonte adh*/
   background:none;
 }
 body.popUpCredit p, body.popUpCredit li, body.popUpCredit h2, body.popUpCredit a, body.popUpCredit h3{
@@ -4074,10 +4037,6 @@ body.popUpCredit #content{
   background:black;
   font-size:1px;/* pour IE */
 }
-
-
-
-/*-----------------------------------*/
 
 .sep-gris {
 	border-bottom:1px solid #B8B8B8 !important;
@@ -4235,10 +4194,8 @@ span.chevron {display:none;}
 .shomeMV .MarketPlaceOffers ul li {padding-left:0 !important; padding-top:5px !important;} /* Style pour les blocs Coups de coeurs et Meilleurs vente */
 .MarketPlaceOffers .pdg_t_sm {padding-top:0 !important; margin:0 !important;}
 .MarketPlaceOffers .pdg_b_no {padding-bottom:0 !important; margin-bottom:0 !important;}
-/*.MarketPlaceOffers ul li span {font-size: 11px !important}*/
 .MarketPlaceOffers li.sellyours {display: none;} /* Code bourrin pour non affichage du Vendez Le Votre */
 .listeproduits dd.shomeMV div.MarketPlaceOffers ul li div.sep { border:none !important; padding:0 !important; margin:0 !important;}
-/* */
 
 /*intro homes */
 .introHome {color:#666;margin:0 0 10px 0}
@@ -4246,7 +4203,7 @@ span.chevron {display:none;}
 .introHome dt, .introHome dd {margin:0; padding:0; display:inline}
 
 /*pubfooter */
-#pubHgFooter div.pubtitre {/* background:#dcdcdc; */color:#a5a5a5 !important;font-size:10px !important;left:-2px;height:14px;text-align:center}
+#pubHgFooter div.pubtitre {color:#a5a5a5 !important;font-size:10px !important;left:-2px;height:14px;text-align:center}
 #pubHgFooter div.pubtitre span {padding-left:5px}
 
 /* bando tournant */
@@ -4259,9 +4216,6 @@ span.chevron {display:none;}
 .navIndex {position:relative;text-align:center;font-size:12px;color:#000;}
 .navIndex span {padding:0 2px;cursor:pointer;}
 .navIndex .active {font-weight:bold;color:#DE9C00;}
-
-
-
 
 
 /* concours */
@@ -4287,7 +4241,7 @@ span.chevron {display:none;}
 
 /* Ebook : block meilleures ventes */
 .meilleures-ventes .h2 {font-size:14px;font-weight:bold;}
-.meilleures-ventes li {display:block;background:url(bg_item_meilleures_ventes.png) repeat-x bottom;border-bottom:1px solid #ccc;min-height:32px;/*height:37px*/;overflow:hidden;zoom:1;}
+.meilleures-ventes li {display:block;background:url(bg_item_meilleures_ventes.png) repeat-x bottom;border-bottom:1px solid #ccc;min-height:32px;overflow:hidden;zoom:1;}
 *:first-child+html .meilleures-ventes li{margin-bottom:-3px;}/*IE7-8*/
 * html .meilleures-ventes li{margin-bottom:-3px;height:32px;}/*IE6*/
 .meilleures-ventes .numero {float:left;display:block;color:#fff;background:url(bg_numero.png) no-repeat top right; width:19px; height:19px;text-align:center;line-height:19px;}
@@ -4302,17 +4256,15 @@ span.chevron {display:none;}
 .meilleures-ventes .posabs {position:absolute;}
 .meilleures-ventes .hide {display:none!important;}
 .meilleures-ventes ul {padding:0;margin:0;}
-.meilleures-ventes li.first-child {/*height:65px;*/}
-.meilleures-ventes li.first-child .numero {position:absolute;top:0;left:47px;float:none;/*text-align:right;padding-right:4px;*/}
+.meilleures-ventes li.first-child .numero {position:absolute;top:0;left:47px;float:none;}
 .meilleures-ventes li.first-child .floatr, .meilleures-ventes li.first-child:hover .floatr{width:105px;}
-.meilleures-ventes li.first-child .visuel {float:left;display:block!important;/*top:2px;right:132px;border:1px solid #ccc;height:60px;*/}
+.meilleures-ventes li.first-child .visuel {float:left;display:block!important;}
 
 .meilleures-ventes li:hover, .meilleures-ventes li.first-hover, .meilleures-ventes li.item-hover  {background-position:top;}
-.meilleures-ventes li.item:hover, .meilleures-ventes li.item-hover {/*height:65px;*/}
 .meilleures-ventes li.item:hover .floatr, .meilleures-ventes li.item-hover .floatr{width:125px;}
 .meilleures-ventes li.item:hover .numero, .meilleures-ventes li.item-hover .numero {display:none;}
 .meilleures-ventes li:hover .hide, .meilleures-ventes li.first-hover .hide, .meilleures-ventes li.item-hover .hide {display:block!important;}
-.meilleures-ventes li.item:hover .visuel, .meilleures-ventes li.item-hover .visuel {float:left;/*top:0;left:0;*/}
+.meilleures-ventes li.item:hover .visuel, .meilleures-ventes li.item-hover .visuel {float:left;}
 
 
 
@@ -4348,11 +4300,6 @@ span.chevron {display:none;}
 	padding: 2px 5px;
 	cursor: default;
 	display: block;
-	/* 
-	if width will be 100% horizontal scrollbar will apear 
-	when scroll mode will be used
-	*/
-	/*width: 100%;*/
 	font: "Arial,Helvetica,Verdana,sans-serif";
 	font-size: 12px;
 	/* 
@@ -4426,10 +4373,6 @@ span.chevron {display:none;}
 	min-height:353px;
 }
 /* l'image de background est précisée en ligne */
-/*#mea_enf .line_3cols .block {float:left;margin-right:7px;width:31.5%}
-#mea_enf .line_3cols .block_last {float:none;margin-right:0;width:31.5%}
-#mea_enf .mise_en_avant .tl, #mea_enf .mise_en_avant .tr, #mea_enf .mise_en_avant .bl, #mea_enf .mise_en_avant .br {
-background-image:url(/img/v2/skin/blocks/mea_enf_corners.png);	}*/
 #mea_enf .prix {height:22px;}
 
 
