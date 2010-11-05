@@ -1,5 +1,3 @@
-ServerSignature Off
-
 <FilesMatch "\.(ico|flv|swf|jpg|jpeg|png|gif|css|js)$">
 Header unset Last-Modified
 Header set Cache-Control "public"
