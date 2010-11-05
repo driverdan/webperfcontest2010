@@ -1245,7 +1245,7 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
   background-image:url(prix-vert.gif);
 }
 .produit dd.pictoPrixRougeSmall{
-  background-image:url(bonne-affaire-small.gif);
+  background-image:url(bonne-affaire-small.png);
 }
 .produit dd.pictoPrixRougeNormal{
   background-image:url(minipictoaffaire.gif);
@@ -1254,7 +1254,7 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
   background-image:url(mini1erprix.gif);
 }
 .produit dd.pictoPrixRougeBig{
-  background-image:url(bonne-affaire.gif);
+  background-image:url(bonne-affaire.png);
 }
 .produit dd.pictoSoldesNormal{
   background-image:url(soldes24.png);
@@ -1301,7 +1301,7 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
   background-image:url(livre.gif);
 }
 .produit dd.picto10Ans {
-  background-image:url(10ans.gif);
+  background-image:url(10ans.png);
 }
 .produit dd.pictoSourisSmall{
   background-image:url(souris-small.gif);
@@ -1310,7 +1310,7 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
   background-image:url(souris.gif);
 }
 .produit dd.pictopanier{
-  background-image:url(ACC_pictopanier.gif);
+  background-image:url(ACC_pictopanier.png);
 }
 .produit dd.pictotelecharger{
   background-image:url(LIVtelecharger_jaune.gif)
@@ -2805,7 +2805,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background:#FFF;
 }
 .block_gris .inside_block .tl, .block_gris .inside_block .tr, .block_gris .inside_block .bl, .block_gris .inside_block .br{
-  background-image:url(block_gris_inside_corners.gif);
+  background-image:url(block_gris_inside_corners.png);
 }
 .block_gris .gradient_bottom{
   background-image:url(gradient_bottom_block_gris.gif);
@@ -3412,26 +3412,26 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .flecheACC, .flecheGRISE, .flecheRED,.flecheADH, .flecheTPN, .flecheMUS,.flecheLIV,
 .flecheBLACK, .flecheWHITE, .flecheNOEL, .flecheDVD, .flecheLOG, .flecheCDROMS,
 .flecheMIC, .flecheMOB, .flecheMOB2, .flecheMOB3, .flecheIMA, .flechepho, .flecheVOY,
-.flecheSPE, flecheACCMarketing, .flecheREDMarketing,.flecheADHMarketing, .flecheMUSMarketing,
+.flecheSPE, .flecheACCMarketing, .flecheREDMarketing,.flecheADHMarketing, .flecheMUSMarketing,
 .flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
 .flecheMICMarketing, .flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
   padding-left:12px;
   background-position:0 2px;
   background-repeat:no-repeat;
   list-style-type:none;
-  background-image:url(ACC_marron.gif);
+  background-image:url(ACC_marron.png);
 }
 .flecheACCMarketing, .flecheREDMarketing, .flecheADHMarketing, .flecheMUSMarketing,
 .flecheLIVMarketing, .flecheDVDMarketing, .flecheLOGMarketing, .flecheCDROMSMarketing,
 .flecheMICMarketing,.flecheIMAMarketing, .flecheVOYMarketing, .flecheSPEMarketing{
   background-position:0 8px;
-  background-image:url(ACC_marron.gif);
+  background-image:url(ACC_marron.png);
 }
 .flecheBLACK{
-  background-image:url(BLACK_fleche.gif);
+  background-image:url(BLACK_fleche.png);
 }
 .flecheWHITE{
-  background-image:url(BLANC_fleche.gif);
+  background-image:url(BLANC_fleche.png);
 }
 
 .flecheGRISE{
@@ -3463,7 +3463,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-position:0 5px;
   background-repeat:no-repeat;
   list-style-type:none;
-  background-image:url(ACC_puceronde.gif);
+  background-image:url(ACC_puceronde.png);
 }
 
 
