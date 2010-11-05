@@ -112,6 +112,8 @@
 				afficheBanner('visu_banner_' + index, 'rotationOk');
 			});
 		}
+		
+		afficheBanner("visu_banner_0", "rotationOk");
 	});
 	</script>
 </head>
@@ -1235,16 +1237,6 @@
 				<tr>
 					<td valign="top" style="width:15.5em;">
 						<div id="col_gauche" style="margin-right:0;">
-							<script>
-							function DisplayPopUp(theURL) {
-								window.open(theURL,'PopUp','toolbar=no,location=no,menubar=no,status=no,top=0,left=0,resizable=yes,scrollbars=yes,width=530,height=585');
-							}
-
-							function DisplayPopUpGratuit(theURL) {
-								window.open(theURL,'PopUp','toolbar=no,location=no,menubar=no,status=no,top=0,left=0,resizable=yes,scrollbars=yes,width=530,height=585');
-							}
-							</script>
-
 							<h1 id="titres"><img alt="Enfants" src="vignette_enfants.png"></h1>
 
 							<div id="navigation" class="mrg_b_shadw_big">
@@ -1478,10 +1470,6 @@
 											var puce;
 											var monTimer
 
-											function demarreRotation() {
-												afficheBanner("visu_banner_0", "rotationOk");
-											}
-
 											function afficheBanner(idSolde, rotationSolde) {
 												var divImgCible;
 												puce = parseInt(idSolde.substring(12));
@@ -1506,17 +1494,6 @@
 												}
 											}
 
-											// Bidouille pour lancer au chargement et en même temps
-											// éviter les collisions avec le onload qui traine dans le body
-											if (typeof window.addEventListener != 'undefined') { //.. gecko, safari, konqueror and standard
-												window.addEventListener('load', demarreRotation, false);
-											}
-											else if (typeof document.addEventListener != 'undefined') { //.. opera 7
-												document.addEventListener('load', demarreRotation, false);
-											}
-											else if (typeof window.attachEvent != 'undefined') { //.. win/ie
-												window.attachEvent('onload', demarreRotation);
-											}
 											</script>
 										</div><!-- /object container -->
 
@@ -2169,7 +2146,6 @@
 
 												<div class="blk_content">
 													<p class="mrg_no"><a href="http://www4.fnac.com/s130378/Notre-univers-Playmobil?bl=HGENFPromoJouet"><img src="playmobil-184.jpg" alt=""></a></p>
-
 													<p class="mrg_no mrg_h">Offrez à vos enfants tous les Playmobil qu&rsquo;ils désirent : pirates, chevaliers, pompiers, fées...</p>
 
 													<ul class="links mrg_h mrg_t_sm mrg_b">
@@ -2187,7 +2163,6 @@
 
 												<div class="blk_content">
 													<p class="mrg_no"><a href="http://www4.fnac.com/s136742/Jeux-et-jouets-educatifs/Vtech?bl=HGENFPromoJouet2"><img src="vtech-184.jpg" alt=""></a></p>
-
 													<p class="mrg_no mrg_h">Des jouets malins pour grandir intelligent ! Venez découvrir tous les jeux et jouets éducatifs et électroniques de Vtech</p>
 
 													<ul class="links mrg_h mrg_t_sm mrg_b">
