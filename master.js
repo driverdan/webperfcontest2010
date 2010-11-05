@@ -9,8 +9,7 @@ function fixCorners(block){
         for (i = CSSBottomCorners.length - 1; i > -1; --i) {
             CSSBottomCorners[i].style.bottom = "";
         }
-    }
-    else {
+    } else {
         if (IS_Webkit || /Gecko\/200[56]|Opera 8.5/i.test(navigator.userAgent)) 
             fixCornersOnBlocks(block);
     }
@@ -85,7 +84,6 @@ function getAllBlocks(){
                         if (!line.alreadyAdded) { /* on initialise un array de block afin que le traitement soit plus rapide une fois la page chargee */
                             arrLineOfMiseEnAvant.push(line);
                             line.alreadyAdded = true;
-                            
                         }
                         if (!line.miseEnAvantBlocks) {
                             line.miseEnAvantBlocks = [];
@@ -130,9 +128,7 @@ function getAllBlocks(){
  *	Aligne les contenus des blocks de mise en avant quand ceux-ci sont dans un conteneur ligne.
  */
 function fixMiseEnAvant(){
-
     for (var i = 0; i < arrLineOfMiseEnAvant.length; i++) {
-    
         var line = arrLineOfMiseEnAvant[i];
         /* on cherche d'abord l'ensemble des elements qui devronts etre alignes */
         var imgs = [];
@@ -160,7 +156,6 @@ function fixMiseEnAvant(){
                 links.push(y);
 			if (y.className.match(/\bshomeMV\b/)) 
                 market.push(y);
-			
         }
 		for (var d=0; d<div.length; d++) {
 			var o=div[d];
@@ -222,20 +217,15 @@ function fixMiseEnAvant(){
                         var bottomToApply = heightToApply - topToApply;
                         current.childNodes[0].style.paddingTop = intStyleJ(current.childNodes[0], "padding-top") + topToApply + "px";
                         current.childNodes[0].style.paddingBottom = intStyleJ(current.childNodes[0], "padding-bottom") + bottomToApply + "px";
-                    }
-					else if (current.className.match(/\bresume\b/)) {
+                    } else if (current.className.match(/\bresume\b/)) {
 						current.style.paddingBottom = (maxResumeHeight - current.offsetHeight)+"px";
-					}
-                    else if (current.className.match(/\bprix\b/)) {
+					} else if (current.className.match(/\bprix\b/)) {
                         current.style.marginTop = (maxOffset - current.offsetTop) + "px";
-                    }
-					else if (current.className.match(/\bshomeMV\b/)) { // MP !
+                    } else if (current.className.match(/\bshomeMV\b/)) { // MP !
 						current.style.marginTop = (maxOffset - current.offsetTop) + "px";
-					}
-					else if (current.className.match(/\bblk_footer\b/) && current.nodeName == "DIV") {
+					} else if (current.className.match(/\bblk_footer\b/) && current.nodeName == "DIV") {
 						current.style[heightPropertyToUse]  = maxUlHeight+"px";
-					}
-					else {
+					} else {
 						current.style.paddingTop = (maxOffset - current.offsetTop) + "px";
 					}
             }
@@ -249,7 +239,6 @@ function fixMiseEnAvant(){
  *	ex : <div class="line_2cols aligner_produits">
  */
 function fixAligneProduits(){
-
     var maxLengthLinks = 0;
     var maxLengthProduits = 0;
     var maxOffset = 0;
@@ -310,8 +299,7 @@ function fixAddressBlock(){
             var current = lks[k];
             if (current.offsetTop > maxOffset) {
                 maxOffset = current.offsetTop;
-            }
-            else {
+            } else {
                 current.style.marginTop = ((maxOffset) - current.offsetTop) + "px";
             }
             current.style.height = '2em';
@@ -376,8 +364,7 @@ function getAllLists(){
                             x.linksItems.push(y);
                         }
                     }
-                }
-                else {
+                } else {
                     //  dans le cas d'une liste en ligne, on n'alignement pas les links d'acces au produit, mais on aligne les evaluations
                     if (x.className.match(/\bliste_inline\b/)) {
                         var div = x.getElementsByTagName("div");
@@ -389,8 +376,7 @@ function getAllLists(){
                         }
                     }
                 }
-            }
-            else 
+            } else 
                 if (x.className.match(/\bliste_2cols\b/)) {
                     listes_2cols.push(x);
                     x.itemsLeft = [];
@@ -510,8 +496,7 @@ var onloadArrFunctions = [];
 function domLoad(){
     if (document.getElementById("footer")) {
         domLoadCaller();
-    }
-    else {
+    } else {
         domLoadTimer = setTimeout("domLoad()", 10);
     }
 }
@@ -584,16 +569,13 @@ var fnacFlag = 0;
 var fnacTimer;
 
 function timerFix() {
-	if(fnacFlag < 1)
-	{
+	if(fnacFlag < 1) {
 		fnacTimer = setTimeout(function(){
-			//if(IS_IE_ALL) {// concerne uniquement les IE
-				fixBlocksHeight();
-			//}
+			fixBlocksHeight();
 			fixAligneProduits();
 			fnacFlag++;
 		},4000);
-	}else {
+	} else {
 		clearTimeout(fnacTimer);
 	}
 }
