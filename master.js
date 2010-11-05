@@ -603,6 +603,11 @@ $(function(){
 		}
 	});
 	
+	$("#cartouche").click(function() {
+		$('#detailPanier').slideToggle(500);
+		return false;
+	});
+	
 	$("#SCat").change( function() {
 		$("#Fnac_Search").flushCache();
 		var ComboVal = $("#SCat").val();

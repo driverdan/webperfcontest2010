@@ -645,10 +645,10 @@ body.adherents #subfooter a{
 		  #monPanier #cartouche, #monPanier #cartouche p {background:transparent url(background-panier.png) no-repeat left bottom;}
 			#monPanier #cartouche p{margin:0;padding-right:7px;line-height:23px;background-position: right bottom;}
 			* html #monPanier #cartouche p{width:176px}
-				#monPanier .recapPanier{display:block;float:left;height:23px;background:url(ico-panier.png) no-repeat;padding:0 0 0 26px;}
-				#monPanier .recapPanier a {color:#FFF;font-weight:bold;text-decoration:none}
-				#monPanier .recapPanier a:hover {text-decoration:underline}
-				#monPanier .switch{display:block;float:left;width:11px;height:23px;text-indent:-9999px;background:url(ico-switch.png) no-repeat;margin:0 0 0 6em;cursor:pointer;}
+				#cartouche a {display:block;float:left;height:23px;}
+				#monPanier .recapPanier {background:url(ico-panier.png) no-repeat;padding:0 0 0 26px;color:#FFF;font-weight:bold;text-decoration:none}
+				#monPanier .recapPanier:hover {text-decoration:underline}
+				#monPanier .switch{width:11px;text-indent:-9999px;background:url(ico-switch.png) no-repeat;margin:0 0 0 6em;}
 			#monPanier #rideau{position:absolute;left:0;top:19px;z-index:9998;}
 				#monPanier #detailPanier{width:15.7em;background-color:#222;padding-top:6px;color:#FFF;display:none;}
 				#monPanier #detailPanier dl{background-color:#222;border:solid 1px #777;border-top-width:0;padding:3px;margin:0}
