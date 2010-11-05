@@ -1,20 +1,3 @@
-
-/* AddEvent :
-	Cette fonction permet d'associer une fonction a un evenement,
-	ex : addEvent(window, "load", mafonction)
-	ne Jamais mettre de parentheses a la fonction passee en parametres
-*/
-function addEvent( obj, type, fn ){
-	if (obj.addEventListener)
-		obj.addEventListener( type, fn, false );
-	else if (obj.attachEvent)
-	{
-		obj["e"+type+fn] = fn;
-		obj[type+fn] = function() { obj["e"+type+fn]( window.event ); }
-		obj.attachEvent( "on"+type, obj[type+fn] );
-	}
-}
-
 /* fixCorners :
  * Cette fonction  est appelee lorsque l'on doit fixer tous les coins d'une page ou d'un block.
  * ex :
@@ -604,8 +587,6 @@ function timerFix() {
 	if(fnacFlag < 1)
 	{
 		fnacTimer = setTimeout(function(){
-			//fixMiseEnAvant();
-			//fixListe2cols();
 			//if(IS_IE_ALL) {// concerne uniquement les IE
 				fixBlocksHeight();
 			//}
@@ -620,12 +601,6 @@ timerFix();
 
 
 //on lance la fonction onloadCaller une fois la page chargee.
-
-addEvent(window, "load", onloadCaller);
-/*
-$(document).ready(function(){
+$(function(){
     onloadCaller();
-})
-*/
-
-
+});
