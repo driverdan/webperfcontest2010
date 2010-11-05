@@ -51,7 +51,6 @@ $.fn.extend({
 });
 
 $.Autocompleter = function(input, options) {
-
 	var KEY = {
 		UP: 38,
 		DOWN: 40,
@@ -63,22 +62,21 @@ $.Autocompleter = function(input, options) {
 		PAGEUP: 33,
 		PAGEDOWN: 34,
 		BACKSPACE: 8
-	};
+	}
 
 	// Create $ object for input element
-	var $input = $(input).attr("autocomplete", "off").addClass(options.inputClass);
+	,$input = $(input).attr("autocomplete", "off").addClass(options.inputClass)
 
-	var timeout;
-	var previousValue = "";
-	var cache = $.Autocompleter.Cache(options);
-	var hasFocus = 0;
-	var lastKeyPressCode;
-	var config = {
+	,timeout
+	,previousValue = ""
+	,cache = $.Autocompleter.Cache(options)
+	,hasFocus = 0
+	,lastKeyPressCode
+	,config = {
 		mouseDownOnSelect: false
-	};
-	var select = $.Autocompleter.Select(options, input, selectCurrent, config);
-	
-	var blockSubmit;
+	}
+	,select = $.Autocompleter.Select(options, input, selectCurrent, config)
+	,blockSubmit;
 	
 	// prevent form submit in opera when selecting with return key
 	$.browser.opera && $(input.form).bind("submit.autocomplete", function() {
@@ -93,7 +91,6 @@ $.Autocompleter = function(input, options) {
 		// track last key pressed
 		lastKeyPressCode = event.keyCode;
 		switch(event.keyCode) {
-		
 			case KEY.UP:
 				event.preventDefault();
 				if ( select.visible() ) {
@@ -169,9 +166,9 @@ $.Autocompleter = function(input, options) {
 		// TODO why not just specifying both arguments?
 		var fn = (arguments.length > 1) ? arguments[1] : null;
 		function findValueCallback(q, data) {
-			var result;
+			var result, i;
 			if( data && data.length ) {
-				for (var i=0; i < data.length; i++) {
+				for (i=0; i < data.length; i++) {
 					if( data[i].result.toLowerCase() == q.toLowerCase() ) {
 						result = data[i];
 						break;
@@ -199,15 +196,17 @@ $.Autocompleter = function(input, options) {
 	
 	
 	function selectCurrent() {
-		var selected = select.selected();
+		var selected = select.selected()
+			,v
+			,words;
 		if( !selected )
 			return false;
 		
-		var v = selected.result;
+		v = selected.result;
 		previousValue = v;
 		
 		if ( options.multiple ) {
-			var words = trimWords($input.val());
+			words = trimWords($input.val());
 			if ( words.length > 1 ) {
 				v = words.slice(0, words.length - 1).join( options.multipleSeparator ) + options.multipleSeparator + v;
 			}
@@ -249,8 +248,8 @@ $.Autocompleter = function(input, options) {
 		if ( !value ) {
 			return [""];
 		}
-		var words = value.split( options.multipleSeparator );
-		var result = [];
+		var words = value.split( options.multipleSeparator )
+			,result = [];
 		$.each(words, function(i, value) {
 			if ( $.trim(value) )
 				result[i] = $.trim(value);
@@ -363,10 +362,12 @@ $.Autocompleter = function(input, options) {
 	};
 	
 	function parse(data) {
-		var parsed = [];
-		var rows = data.split("\n");
-		for (var i=0; i < rows.length; i++) {
-			var row = $.trim(rows[i]);
+		var parsed = []
+			,rows = data.split("\n")
+			,i
+			,row;
+		for (i=0; i < rows.length; i++) {
+			row = $.trim(rows[i]);
 			if (row) {
 				row = row.split("|");
 				parsed[parsed.length] = {
@@ -413,9 +414,8 @@ $.Autocompleter.defaults = {
 };
 
 $.Autocompleter.Cache = function(options) {
-
-	var data = {};
-	var length = 0;
+	var data = {}
+		,length = 0;
 	
 	function matchSubset(s, sub) {
 		if (!options.matchCase) 
@@ -441,8 +441,13 @@ $.Autocompleter.Cache = function(options) {
 	function populate(){
 		if( !options.data ) return false;
 		// track the matches
-		var stMatchSets = {},
-			nullData = 0;
+		var stMatchSets = {}
+			,nullData = 0
+			,i
+			,rawValue
+			,value
+			,firstChar
+			,raw;
 
 		// no url was specified, we need to adjust the cache length to make sure it fits the local data store
 		if( !options.url ) options.cacheLength = 1;
@@ -451,22 +456,22 @@ $.Autocompleter.Cache = function(options) {
 		stMatchSets[""] = [];
 		
 		// loop through the array and create a lookup structure
-		for ( var i = 0, ol = options.data.length; i < ol; i++ ) {
-			var rawValue = options.data[i];
+		for (i = 0, ol = options.data.length; i < ol; i++ ) {
+			rawValue = options.data[i];
 			// if rawValue is a string, make an array otherwise just reference the array
 			rawValue = (typeof rawValue == "string") ? [rawValue] : rawValue;
 			
-			var value = options.formatMatch(rawValue, i+1, options.data.length);
+			value = options.formatMatch(rawValue, i+1, options.data.length);
 			if ( value === false )
 				continue;
 				
-			var firstChar = value.charAt(0).toLowerCase();
+			firstChar = value.charAt(0).toLowerCase();
 			// if no lookup array for this character exists, look it up now
 			if( !stMatchSets[firstChar] ) 
 				stMatchSets[firstChar] = [];
 
 			// if the match is a string
-			var row = {
+			row = {
 				value: value,
 				data: rawValue,
 				result: options.formatResult && options.formatResult(rawValue) || value
@@ -511,13 +516,15 @@ $.Autocompleter.Cache = function(options) {
 			 */
 			if( !options.url && options.matchContains ){
 				// track all matches
-				var csub = [];
+				var csub = []
+					,k
+					,c;
 				// loop through all the data grids for matches
-				for( var k in data ){
+				for(k in data ){
 					// don't search through the stMatchSets[""] (minChars: 0) cache
 					// this prevents duplicates
 					if( k.length > 0 ){
-						var c = data[k];
+						c = data[k];
 						$.each(c, function(i, x) {
 							// if we've got a match, add it to the array
 							if (matchSubset(x.value, q)) {
@@ -554,9 +561,9 @@ $.Autocompleter.Cache = function(options) {
 $.Autocompleter.Select = function (options, input, select, config) {
 	var CLASSES = {
 		ACTIVE: "ac_over"
-	};
+	},
 	
-	var listItems,
+		listItems,
 		active = -1,
 		data,
 		term = "",
@@ -610,9 +617,10 @@ $.Autocompleter.Select = function (options, input, select, config) {
 	function moveSelect(step) {
 		listItems.slice(active, active + 1).removeClass(CLASSES.ACTIVE);
 		movePosition(step);
-        var activeItem = listItems.slice(active, active + 1).addClass(CLASSES.ACTIVE);
+        var activeItem = listItems.slice(active, active + 1).addClass(CLASSES.ACTIVE)
+			,offset;
         if(options.scroll) {
-            var offset = 0;
+            offset = 0;
             listItems.slice(0, active).each(function() {
 				offset += this.offsetHeight;
 			});
@@ -641,14 +649,17 @@ $.Autocompleter.Select = function (options, input, select, config) {
 	
 	function fillList() {
 		list.empty();
-		var max = limitNumberOfItems(data.length);
-		for (var i=0; i < max; i++) {
+		var max = limitNumberOfItems(data.length)
+			,i
+			,formatted
+			,li;
+		for (i=0; i < max; i++) {
 			if (!data[i])
 				continue;
-			var formatted = options.formatItem(data[i].data, i+1, max, data[i].value, term);
+			formatted = options.formatItem(data[i].data, i+1, max, data[i].value, term);
 			if ( formatted === false )
 				continue;
-			var li = $("<li/>").html( options.highlight(formatted, term) ).addClass(i%2 == 0 ? "ac_even" : "ac_odd").appendTo(list)[0];
+			li = $("<li/>").html( options.highlight(formatted, term) ).addClass(i%2 == 0 ? "ac_even" : "ac_odd").appendTo(list)[0];
 			$.data(li, "ac_data", data[i]);
 		}
 		listItems = list.find("li");
@@ -700,7 +711,9 @@ $.Autocompleter.Select = function (options, input, select, config) {
 			return this.visible() && (listItems.filter("." + CLASSES.ACTIVE)[0] || options.selectFirst && listItems[0]);
 		},
 		show: function() {
-			var offset = $(input).offset();
+			var offset = $(input).offset()
+				,listHeight
+				,scrollbarsVisible;
 			element.css({
 				width: typeof options.width == "string" || options.width > 0 ? options.width : $(input).width(),
 				top: offset.top + input.offsetHeight,
@@ -714,11 +727,11 @@ $.Autocompleter.Select = function (options, input, select, config) {
 				});
 				
                 if($.browser.msie && typeof document.body.style.maxHeight === "undefined") {
-					var listHeight = 0;
+					listHeight = 0;
 					listItems.each(function() {
 						listHeight += this.offsetHeight;
 					});
-					var scrollbarsVisible = listHeight > options.scrollHeight;
+					scrollbarsVisible = listHeight > options.scrollHeight;
                     list.css('height', scrollbarsVisible ? options.scrollHeight : listHeight );
 					if (!scrollbarsVisible) {
 						// IE doesn't recalculate width when scrollbar disappears
