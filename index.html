@@ -107,6 +107,15 @@
 		}
 		
 		afficheBanner("visu_banner_0", "rotationOk");
+		
+		// Replace inline JSON loader calls with this
+		$(".MarketPlaceOffers").each(function() {
+			var p = this.id.substring(3);
+			
+			$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=" + p + "&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?", function(d) {
+				$("#mpo" + p).html(d.MarketPlaceSummary);
+			});
+		});
 	});
 	</script>
 </head>
@@ -417,7 +426,6 @@
 
 						<div id="waitingMsg">
 							<img src="chrono_anim.gif" alt="Veuillez patienter...">
-
 							<p>Veuillez patienter...</p>
 						</div>
 					</div><!-- /fin/#MONCOIN-->
@@ -1492,7 +1500,7 @@
 																<dd class="links mrg_b_sm"><!-- Ajout panier -->
 																» <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2913782&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo1">Ajouter au panier</a></dd>
 																<dd class="shomeMV">
-																	<div id="Classique2_MP" class="MarketPlaceOffers"></div>
+																	<div id="mpo2913782" class="MarketPlaceOffers"></div>
 																</dd>
 															</dl>
 														</div>
@@ -1505,15 +1513,7 @@
 															<li class="first">» <a href="http://www4.fnac.com/s120211/Jeux-de-societe?bl=HGENFblo1">Tous les Jeux de société</a></li>
 														</ul>
 													</div>
-												</div><!-- Offres MarketPlace -->
-												<script>
-												$(function(){
-													$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2913782&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-													function(data){
-														document.getElementById("Classique2_MP").innerHTML = data.MarketPlaceSummary;
-													});
-												});										
-												</script> <!-- /offres MarketPlace -->
+												</div>
 											</div><!-- Fin Bloc -->
 
 											<div class="block block_jaune block_jaune_mea mise_en_avant">
@@ -1533,7 +1533,7 @@
 																<dd class="links mrg_b_sm"><!-- Ajout panier -->
 																» <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2990502&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo2">Ajouter au panier</a></dd>
 																<dd class="shomeMV">
-																	<div id="Offre adhérents3_MP" class="MarketPlaceOffers"></div>
+																	<div id="mpo2990502" class="MarketPlaceOffers"></div>
 																</dd>
 															</dl>
 														</div>
@@ -1546,15 +1546,7 @@
 															<li class="first">» <a href="http://recherche.fnac.com/n188843/Offres-speciales-adherents-jouets?bl=HGENFblo2">Toutes les offres adhérents</a></li>
 														</ul>
 													</div>
-												</div><!-- Offres MarketPlace -->
-												<script>
-												$(function(){
-													$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2990502&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-													function(data){
-														document.getElementById("Offre adhérents3_MP").innerHTML = data.MarketPlaceSummary;
-													});
-												});										
-												</script> <!-- /offres MarketPlace -->
+												</div>
 											</div><!-- Fin Bloc -->
 
 											<div class="block block_last mise_en_avant">
@@ -1572,7 +1564,7 @@
 																<dd class="resume">Un piano, une batterie et une guitare regroupés en un seul instrument&nbsp;! Votre enfant sera la star du rock&nbsp;!</dd>
 																<dd class="prix"><em class="delStylePrice">à partir de&nbsp;</em>39,90&nbsp;&euro;</dd>
 																<dd class="shomeMV">
-																	<div id="Classique4_MP" class="MarketPlaceOffers"></div>
+																	<div id="mpo2913807" class="MarketPlaceOffers"></div>
 																</dd>
 															</dl>
 														</div>
@@ -1585,15 +1577,7 @@
 															<li class="first">» <a href="http://www4.fnac.com/s136160/5-a-8-ans/Vtech?bl=HGENFblo3">Tous les Vtech</a></li>
 														</ul>
 													</div>
-												</div><!-- Offres MarketPlace -->
-												<script>
-												$(function(){
-													$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2913807&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-													function(data){
-														document.getElementById("Classique4_MP").innerHTML = data.MarketPlaceSummary;
-													});
-												});										
-												</script> <!-- /offres MarketPlace -->
+												</div>
 											</div><!-- Fin Bloc -->
 										</div><!-- DEBUT DES BLOCS DU HAUT DE PAGE -->
 
@@ -1615,7 +1599,7 @@
 																<dd class="links mrg_b_sm"><!-- Ajout panier -->
 																» <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2990541&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo4">Ajouter au panier</a></dd>
 																<dd class="shomeMV">
-																	<div id="Offre spéciale5_MP" class="MarketPlaceOffers"></div>
+																	<div id="mpo2990541" class="MarketPlaceOffers"></div>
 																</dd>
 															</dl>
 														</div>
@@ -1628,15 +1612,7 @@
 															<li class="first">» <a href="http://www4.fnac.com/s135876/Bons-plans-sur-les-jouets?bl=HGENFblo4">Tous les bons plans jouets</a></li>
 														</ul>
 													</div>
-												</div><!-- Offres MarketPlace -->
-												<script>
-												$(function(){
-													$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2990541&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-													function(data){
-														document.getElementById("Offre spéciale5_MP").innerHTML = data.MarketPlaceSummary;
-													});
-												});										
-												</script> <!-- /offres MarketPlace -->
+												</div>
 											</div><!-- Fin Bloc -->
 
 											<div class="block mise_en_avant">
@@ -1659,7 +1635,7 @@
 																» <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2990529&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo5">Ajouter au panier</a></dd>
 
 																<dd class="shomeMV">
-																	<div id="Classique6_MP" class="MarketPlaceOffers"></div>
+																	<div id="mpo2990529" class="MarketPlaceOffers"></div>
 																</dd>
 															</dl>
 														</div>
@@ -1672,15 +1648,7 @@
 															<li class="first">» <a href="http://www4.fnac.com/s132339/Jouets-pour-garcons/Vehicules-et-Circuits?bl=HGENFblo5">Tous les bons plans jouets&nbsp;!</a></li>
 														</ul>
 													</div>
-												</div><!-- Offres MarketPlace -->
-												<script>
-												$(function(){
-													$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2990529&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-													function(data){
-														document.getElementById("Classique6_MP").innerHTML = data.MarketPlaceSummary;
-													});
-												});										
-												</script> <!-- /offres MarketPlace -->
+												</div>
 											</div><!-- Fin Bloc -->
 
 											<div class="block block_orange block_orange_mea block_last mise_en_avant">
@@ -1704,7 +1672,7 @@
 																» <a href="http://www4.fnac.com/Account/Basket/IntermediaryShoppingCartRecalculate.aspx?Prid=2805733&Qty=1&Sctype=standard&Action=1&Err=0&bl=HGENFblo6">Ajouter au panier</a></dd>
 
 																<dd class="shomeMV">
-																	<div id="Coup de coeur7_MP" class="MarketPlaceOffers"></div>
+																	<div id="mpo2805733" class="MarketPlaceOffers"></div>
 																</dd>
 															</dl>
 														</div>
@@ -1717,15 +1685,7 @@
 															<li class="first">» <a href="http://www4.fnac.com/s141749/10-Jours-coups-de-coeur-sur-les-jouets?bl=HGENFblo6">Tous les jouets 10 jours coups de c&oelig;ur&nbsp;!</a></li>
 														</ul>
 													</div>
-												</div><!-- Offres MarketPlace -->
-												<script>
-												$(function(){
-												$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2805733&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-												function(data){
-																document.getElementById("Coup de coeur7_MP").innerHTML = data.MarketPlaceSummary;
-														});
-												});										
-												</script> <!-- /offres MarketPlace -->
+												</div>
 											</div><!-- Fin Bloc -->
 											<!-- FIN BLOC -->
 										</div><!-- DEBUT BLOCS DU MILIEU -->
@@ -1756,18 +1716,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Meilleures ventes8_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2989706" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2989706&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Meilleures ventes8_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li>
@@ -1787,18 +1739,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Meilleures ventes9_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo3002564" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=3002564&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Meilleures ventes9_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li>
@@ -1818,18 +1762,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Meilleures ventes10_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2779374" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2779374&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Meilleures ventes10_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li>
@@ -1849,18 +1785,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Meilleures ventes11_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2990550" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2990550&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Meilleures ventes11_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li class="last">
@@ -1880,18 +1808,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Meilleures ventes12_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2911351" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2911351&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Meilleures ventes12_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 														</ul>
 													</div><!-- FIN MULTIPRODUIT -->
@@ -1928,18 +1848,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Classique13_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo3101560" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=3101560&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Classique13_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li>
@@ -1959,18 +1871,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Classique14_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2913774" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2913774&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Classique14_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li>
@@ -1990,18 +1894,10 @@
 																		
 
 																		<dd class="shomeMV">
-																			<div id="Classique15_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2760081" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2760081&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Classique15_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li>
@@ -2020,18 +1916,10 @@
 																		<!-- Ajout panier -->
 																		
 																		<dd class="shomeMV">
-																			<div id="Classique16_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2990514" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2990514&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Classique16_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 
 															<li class="last">
@@ -2050,18 +1938,10 @@
 																		<!-- Ajout panier -->
 																		
 																		<dd class="shomeMV">
-																			<div id="Classique17_MP" class="MarketPlaceOffers"></div>
+																			<div id="mpo2989754" class="MarketPlaceOffers"></div>
 																		</dd>
 																	</dl>
-																</div><!-- Offres MarketPlace -->
-																<script>
-																$(function(){
-																$.getJSON("http://www4.fnac.com/MarketPlace/SummaryOfferLine.aspx?PRID=2989754&Ref=FnacDirect&tagmode=any&format=json&jsoncallback=?",									
-																function(data){
-																document.getElementById("Classique17_MP").innerHTML = data.MarketPlaceSummary;
-																});
-																});										
-																</script> <!-- /offres MarketPlace -->
+																</div>
 															</li>
 														</ul>
 													</div><!-- FIN MULTIPRODUIT -->
