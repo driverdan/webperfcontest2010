@@ -25,7 +25,7 @@ function s_doPlugins(s) {
 	/* Add calls to plugins here */
 	/* Internal campaign */
 	if(!s.eVar1)
-	s.eVar1=s.getQueryParam('sc_id');
+		s.eVar1=s.getQueryParam('sc_id');
 	/* Set non-internal campaign variable */
 	if(s.eVar1)
 		s.eVar2='internal campaign';
