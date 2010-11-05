@@ -10,6 +10,14 @@
 	
 	<link rel="stylesheet" href="style.css">
 	
+	<!--script src="LAB.min.js"></script>
+	<script>
+	$LAB
+	.script("jquery.js").wait()
+	.script(["jquery.autocomplete.js","jquery.bgiframe.min.js","jquery.ajaxQueue.js"]).wait()
+	.script("package.js").wait()
+	.script("master.js");
+	</script-->
 	<script src="jquery.js"></script>
 	<script src="jquery.autocomplete.js"></script>
 	<script src="jquery.bgiframe.min.js"></script>
@@ -62,25 +70,6 @@
 								</select> <input type="hidden" name="SID" value="e85f0b48-ae1d-a5f5-aa15-fbffdc4e1c1a"> <input type="hidden" name="UID" value="0e3649c79-3afd-18b8-7817-fa868bc99668"> <input type="hidden" name="Origin" value="FnacAff"> <input type="hidden" name="TTL" value="241020101133"> <input type="hidden" name="OrderInSession" value="0"> <input type="text" class="text" id="Fnac_Search" name="Search"> <input type="hidden" id="ebook" name="download_ebook"> <input type="hidden" name="bl" value="HGENFrera"> <input type="hidden" name="sft" id="sft" value="1"> <span class="submit"><input type="submit" name="submitbtn" id="submitbtn" value="Ok" alt="Lancer la recherche"></span>
 							</fieldset>
 						</form>
-						<script>
-						//ce script va sauter avec la sortie du moteur de recherche v3
-						$("#submitbtn").click(ChangeContext);
-
-						function ChangeContext() {
-							var context =  $("#ebook").val();
-							var val = $("#SCat").val();
-							if(val == "ebook") {
-								$("#SCat").val("book");
-							} else {
-								$("#ebook").val("false");
-							}
-						}
-						$("#Fnac_Search").keypress(function(e) {
-							if (e.keyCode == 13) {
-								ChangeContext();
-							}
-						});
-						</script>
 					</div><!-- /fin/#SEARCH-->
 
 					<div id="MONCOIN">
@@ -1326,10 +1315,10 @@
 												</div>
 											</div>
 											<script>
-											var nbBanner = 3;
-											var idSuivant;
-											var puce;
-											var monTimer;
+											var nbBanner = 3
+												,idSuivant
+												,puce
+												,monTimer;
 
 											function afficheBanner(idSolde, rotationSolde) {
 												var divImgCible;

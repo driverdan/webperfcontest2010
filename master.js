@@ -585,6 +585,24 @@ timerFix();
 //on lance la fonction onloadCaller une fois la page chargee.
 $(function(){
     onloadCaller();
+
+	//ce script va sauter avec la sortie du moteur de recherche v3
+	function ChangeContext() {
+		var context =  $("#ebook").val();
+		var val = $("#SCat").val();
+		if(val == "ebook") {
+			$("#SCat").val("book");
+		} else {
+			$("#ebook").val("false");
+		}
+	}
+	$("#submitbtn").click(ChangeContext);
+	$("#Fnac_Search").keypress(function(e) {
+		if (e.keyCode == 13) {
+			ChangeContext();
+		}
+	});
+	
 	$("#SCat").change( function() {
 		$("#Fnac_Search").flushCache();
 		var ComboVal = $("#SCat").val();
