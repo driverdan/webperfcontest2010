@@ -47,9 +47,6 @@ ul.arrow li{
 }
 
 
-
-
-
 /****************
 * CSS fnac.com
 *****************/
@@ -62,12 +59,12 @@ body{
   font-size:12px;
   _font-size:0.75em;
   zoom:1;
-  color:#666; /* gris */
+  color:#666;
   background:#FFF url(body-background-standard.png) repeat-x center top;
 }
 a{
   text-decoration:none;
-  color:#000; /* lot2 :update */
+  color:#000;
 }
 a:hover{
   text-decoration:underline;
@@ -120,9 +117,9 @@ p{
 /* form elements */
 input.text, select,#deliverTable input{
   padding:0.2em 0;
-  border:1px solid #A7A6AA; /* gris */
+  border:1px solid #A7A6AA;
   font-size:0.9em;
-  color:#666; /* gris foncé */
+  color:#666;
 }
 textarea{
   font-family:Arial, Verdana, Helvetica, sans-serif;
@@ -130,9 +127,9 @@ textarea{
 #deliverTable textarea{
   padding:0.2em 0;
   height:10em;
-  border:1px solid #A7A6AA; /* gris */
+  border:1px solid #A7A6AA;
   font-size:1em;
-  color:#666; /* gris foncé */
+  color:#666;
 }
 
 select{
@@ -181,13 +178,13 @@ form, fieldset{
 .hasJS .hidesubmit .submit{display:none }
 
 /* context :applique le contexte de formatage (cf la doc fournie lot1 pour plus d'informations */
-.context{ /* lot2 */
+.context{
   overflow:hidden;
   _overflow:visible;
   zoom:1;
 }
 h4 cite{
-  color:#666; /* gris */
+  color:#666;
   font-style:normal;
   font-weight:normal;
 }
@@ -262,16 +259,16 @@ html body .mrg_b_no{margin-bottom:0 !important}
 .mrg_b_shadw_no{margin-bottom:25px !important}/*blocs sans ombre*/
 
 /**************  classes de mise en page***************/
-.txt_l{text-align:left !important;} /* lot2 :update */
-.txt_c{text-align:center !important;} /* lot2 :update */
-.txt_r{text-align:right !important;} /* lot2 :update */
-.txt_t{vertical-align:top !important;} /* lot2 :update */
-.txt_m{vertical-align:middle !important;} /* lot2 :update */
-.txt_b{vertical-align:bottom !important;} /* lot2 :update */
-.floatl{float:left} /* lot2 */
-.floatr{float:right} /* lot2 */
-.center{margin-left:auto !important; margin-right:auto !important;} /* lot2 */
-.img_m img, .img_m .inputImg{vertical-align:middle !important;} /* lot2 :update */
+.txt_l{text-align:left !important;}
+.txt_c{text-align:center !important;}
+.txt_r{text-align:right !important;}
+.txt_t{vertical-align:top !important;}
+.txt_m{vertical-align:middle !important;}
+.txt_b{vertical-align:bottom !important;}
+.floatl{float:left}
+.floatr{float:right}
+.center{margin-left:auto !important; margin-right:auto !important;}
+.img_m img, .img_m .inputImg{vertical-align:middle !important;}
 
 /**************  gestion de background ***************/
 .no_bg{background:none !important;}
@@ -321,12 +318,12 @@ dl.generique dt{padding:0;margin:0;}
 /************** classes de dimensions en % **********/
 .width30{width:30%}
 .width40{width:40%}
-.width50{width:50%} /* lot2 */
+.width50{width:50%}
 .width60{width:60%}
 .width65{width:65%}
-.width70{width:70%} /* lot2 */
-.width75{width:75%} /* lot2 */
-.width80{width:80%} /* lot2 */
+.width70{width:70%}
+.width75{width:75%}
+.width80{width:80%}
 /************** layout **********/
 .dispeblock{display:block!important}
 .table{display:table!important}
@@ -355,7 +352,7 @@ dl.generique dt{padding:0;margin:0;}
 }
 	
 /* ========== Content ========== */
-#content{ /* lot2 :update */
+#content{
   clear:both;
   padding:10px 10px 0 10px;
   /* contexte de formatage */
@@ -409,7 +406,7 @@ dl.generique dt{padding:0;margin:0;}
   margin:0;
 }
 #col_gauche, #col_droite{
-  color:#333; /* gris foncé */
+  color:#333;
 }
 /* ====== Colonnes Template 2 cols ====== */
 #page_2cols #col_centre{
@@ -457,12 +454,12 @@ dl.generique dt{padding:0;margin:0;}
 #cheminfer li{
   display:inline;
   margin:0 5px 0 0;
-  color:#000; /* noir */
+  color:#000;
 }
 #cheminfer a{
   vertical-align:top;
   text-decoration:none;
-  color:#000; /* noir */
+  color:#000;
 }
 #cheminfer a:hover{
   text-decoration:underline;
@@ -554,7 +551,7 @@ overflow:hidden;
   padding:0 0 0 10px;
   font-size:0.8em;
   white-space:nowrap;
-  border-left:1px solid #666;  /* gris foncé */
+  border-left:1px solid #666; 
 }
 #subfooter li.first{
   margin:0;
@@ -563,7 +560,7 @@ overflow:hidden;
 }
 #subfooter a{
   text-decoration:none;
-  color:#666; /* gris foncé */
+  color:#666;
   text-transform:uppercase;
   font-weight:bold
 }
@@ -571,7 +568,7 @@ body.adherents #subfooter a{
   color:#666; /* gris très foncé */
 }
 #subfooter a:hover, body.adherents #subfooter a:hover{
-  color:#000; /* noir */
+  color:#000;
 }
 #subfooter a.min{
   text-transform:none;
@@ -602,26 +599,24 @@ body.adherents #subfooter a{
 
 #HEADER{
 	/* initialement sur #page */
-		  margin:0 auto 0;
-		  min-width:996px;
-		  width:83em;
+  margin:0 auto 0;
+  min-width:996px;
+  width:83em;
 	/* === */
   position:relative;
   z-index:55;
   font-family:Arial,Helvetica,Verdana,sans-serif;
 }
-#HEADER *{/*cursor:default;*/margin:0;padding:0}
+#HEADER *{margin:0;padding:0}
 #HEADER ul{list-style:none;}
 #HEADER a, #HEADER a *{cursor:pointer;}
 
 
   /* ======* TOP *==================*/
   #TOP{height:91px}
-	/*-----*/
     #topLEFT{float:left;width:147px;margin:0;}
       #logoFnac{display:block;width:76px;height:62px;text-indent:-5000px;margin:14px 0 0 23px;background: url(logo-fnac-png24.png) no-repeat 0 0}
       * html #logoFnac{background-image: url(logo-fnac-png8.png)} /*ie6*/
-    /*-----*/
 	#topRIGHT{margin-left:148px}
 	  #CHAINES{overflow:hidden;padding:5px 0 5px 20px;background:url(background-chaines.png) no-repeat top right}
 	  * html #CHAINES{background-color:#EFEFEF;background-image:none;zoom:1}/*ie6*/
@@ -637,10 +632,8 @@ body.adherents #subfooter a{
 		  #ch-Labo a{width:100px; background-position:-457px 0 }
 		  #ch-Magasins a{width:126px; background-position:-558px 0 }
 		  #ch-Adherents a{width:128px; background-position:-685px 0 }
-	  /*-*/
 	  #SEARCH{float:left;width:64.5%;padding-top:18px;}
 
-	  /*-*/
 	  #MONCOIN{float:left;width:35%;padding-top:18px;}
 	    #monCompte{float:left;width:33%;padding-top:4px}
 	      #monCompte img{vertical-align:-15%;padding-right:5px}
@@ -669,7 +662,6 @@ body.adherents #subfooter a{
 				#monPanier .poignee{text-align:center;margin:0}
 				#monPanier .poignee img{display:block;margin:0 auto}
 		  #monPanier .basketInfo{color:#000;margin:0;padding:0 0 0 10px}
-    /*-----*/
 
   /* ======* MENU *=================*/
   #MENU{clear:both;position:relative;height:42px;}
@@ -855,7 +847,6 @@ body.adherents #subfooter a{
 /* ======**** fin header ****====================*/
 
 
-
 /* =========  navigation (menu N-2) ========== */
 
 #navigation, .navigation, body.enfants #navigation {
@@ -921,14 +912,14 @@ body.adherents #subfooter a{
   font-size:1px;
 }
 #navigation dl,#navigation ul, .navigation dl, .navigation ul {
-  background:#FFF; /* blanc */
-  border:1px solid #999; /* gris */
+  background:#FFF;
+  border:1px solid #999;
   border-width:0 1px;
-  padding:0 12px; /*lot2 :update */
-  color:#000; /* noir */
+  padding:0 12px;
+  color:#000;
 }
 #navigation .arboListe{
-  border:1px solid #999; /* gris */
+  border:1px solid #999;
   border-width:0 1px;
   padding-top:5px;
 }
@@ -975,14 +966,14 @@ body.adherents #subfooter a{
 }
 
 body.enfants #navigation dl, body.enfants #navigation ul{
-  padding:0 12px; /*lot2 :update */
+  padding:0 12px;
 }
 #navigation ul,.navigation ul{
   list-style-type:none;
 }
 
 #navigation dl a, #navigation ul a, .navigation dl a, .navigation ul a{
-  color:#666; /* gris foncé */
+  color:#666;
   text-decoration:none;
 }
 body.enfants #navigation dd a, body.enfants #navigation ul a {
@@ -1089,18 +1080,6 @@ body.enfants #navigation dd a, body.enfants #navigation ul a {
 ******************/
 
 /* ======== produit et contact ========= */
-/* on affiche un produit avec une image sur la gauche et la description sur la droite. Le contact se présente exactement pareil et le code est identique.
-Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement dédoublés.
- /* lot2 */
-.produit .number, .produit .img, .contact .number, .contact .img{
-  float:left;
-}
-.produit, .produit .desc, .contact, .contact .desc, .avis, .avis .desc{
-  /* contexte de formatage */
-  overflow:hidden;
-  _overflow:visible;
-  zoom:1;
-}
 /*contexte formatage */
 .produit .number, .produit .number span, .contact .number, .contact .number span{
   display:block;
@@ -1140,7 +1119,7 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement d
   font-size:1.1em;
 }
 .produit dt, .produit dt a{
-  color:#666; /* gris foncé */
+  color:#666;
 }
 .contact dt, .contact dt a{
   color:#DE9C00; /* moutarde */
@@ -1150,7 +1129,7 @@ Afin de ne pas faire de  redondance de code, les sélecteurs seront simplement d
   padding:0;
 }
 .produit .details, .produit .resume,.produit .details a{
-  color:#666; /* gris */
+  color:#666;
 }
 .contact .details{
   color:#000;
@@ -1360,7 +1339,7 @@ dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
   color:#000;
 }
 
-/* contact */ /* lot2 */
+/* contact */
 .contact_presentation .img{
   float:none;
   border:none !important;
@@ -1377,14 +1356,14 @@ dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
   padding:0;
   list-style:none;
 }
-.listeproduits li, .block .listeproduits li{ /* lot2 :update */
+.listeproduits li, .block .listeproduits li{
   border-bottom:1px solid #ccc; /* gris clair */
   padding:8px 0;
 }
 .flatproduit li, .block .flatproduit li{ /* maquette seb */
-  border-bottom:none; /* suppression bordure */
+  border-bottom:none;
 }
-.slim_block .listeproduits li, .slim_block .block .listeproduits li{ /* lot2 :update */
+.slim_block .listeproduits li, .slim_block .block .listeproduits li{
   padding:2px 0;
   _zoom:1;
 }
@@ -1414,20 +1393,20 @@ dd.pictoCadeauFnacmusic div {margin:0 0 0 25px;font-size:11px;}
 }
 
 /* liste de produits en 2 colonnes :avec une seule liste qui constitue la colonne, chaque LI est flotté gauche (float:left), des bordures sont rajoutées selon le block conteneur */
-ul.liste_2cols{ /* lot2 */
+ul.liste_2cols{
   /* contexte de formatage */
   overflow:hidden;
   _overflow:visible;
   zoom:1;
 }
-ul.liste_2cols li{ /* lot2 */
+ul.liste_2cols li{
   clear:left;
   float:left;
   width:47%;
   margin:5px 0;
 }
 
-ul.liste_2cols li.even{ /* lot2 */
+ul.liste_2cols li.even{
   clear:right;
   float:right;
 }
@@ -1436,12 +1415,12 @@ ul.liste_2cols_Vseparator li{
   border:0 !important;
 }
 ul.liste_2cols_Vseparator li.even{
-  border-left:1px solid #CCC !important; /* gris */
+  border-left:1px solid #CCC !important;
   padding-left:10px;
 }
 
 /* liste de produits conseillés :liste en ligne présentée par 3 produits (largeur 30%) avec bordure séparatrice.*/
-.produits_conseilles,.produits_conseilles li{ /* lot2 */
+.produits_conseilles,.produits_conseilles li{
   margin:0;
   padding:0;
   list-style:none;
@@ -1452,34 +1431,34 @@ ul.liste_2cols_Vseparator li.even{
   _overflow:visible;
   zoom:1;
 }
-.produits_conseilles li{ /* on définit les styles du LI */  /* lot2 */
+.produits_conseilles li{ /* on définit les styles du LI */ 
   float:left;
-  border-right:1px solid #FFF; /* blanc */
+  border-right:1px solid #FFF;
   padding:0 10px;
   width:30%;
 }
-.produits_conseilles li.last{  /* lot2 */
+.produits_conseilles li.last{ 
   border:0;
 }
-.produits_conseilles li li{ /* il faut supprimer les styles des sous li */ /* lot2 */
+.produits_conseilles li li{ /* il faut supprimer les styles des sous li */
   float:none;
   border:0;
   padding:0;
   width:auto;
 }
 /* liste de produits alignés sur une ligne */
-ul.liste_inline{ /* lot2 */
+ul.liste_inline{
   /* contexte de formatage */
   overflow:hidden;
   _overflow:visible;
   zoom:1;
 }
-ul.liste_inline li{ /* lot2 */
+ul.liste_inline li{
   float:left;
   width:23.3%;
   margin-right:10px;
 }
-ul.liste_inline li.last{ /* lot2 */
+ul.liste_inline li.last{
   margin-right:0;
 }
 ul.liste_inline .contact, ul.liste_inline .desc{ /* le contexte de formatage bug sous FF avec un overflow :hidden, alors on passe au display:table; */
@@ -1500,7 +1479,7 @@ ul.liste_evaluations .produit{
 }
 ul.liste_evaluations .evaluation{
   color:#000;
-  border-left:1px solid #B2B2B2; /* gris */
+  border-left:1px solid #B2B2B2;
   padding-top:5px;
   float:right;
   width:17.27em;
@@ -1514,7 +1493,7 @@ ul.liste_evaluations .evaluation .pred, ul.liste_evaluations .evaluation .eval{
   zoom:1;
 }
 ul.liste_evaluations .evaluation .eval{
-  background:#EDEDED; /* gris */
+  background:#EDEDED;
 }
 ul.liste_evaluations .evaluation strong{
   float:left;
@@ -1530,7 +1509,7 @@ ul.liste_evaluations .evaluation .link{
 }
 ul.liste_evaluations .evaluation a{
   text-decoration:none;
-  color:#000; /* noir */
+  color:#000;
 }
 
 /* liste_contact :liste de contact, elle se comporte comme une liste de produits */
@@ -1566,7 +1545,7 @@ ul.liste_3cols li.last{
 }
 /* =========== separator ============ */
 .sep{
-  border-bottom:1px solid #000; /* noir */
+  border-bottom:1px solid #000;
   margin:0;
 }
 .blk_content .sep{
@@ -1577,7 +1556,7 @@ ul.liste_3cols li.last{
 .prix{
   font-weight:bold;
   font-size:1.6em;
-  color:#000; /* noir */
+  color:#000;
 }
 .prixSeul{
   padding-bottom:7px;
@@ -1596,7 +1575,7 @@ ul.liste_3cols li.last{
 }
 .infosprice{
   font-weight:normal;
-  color:#000; /* noir */
+  color:#000;
   font-style:normal;
   display:block;
 }
@@ -1614,7 +1593,7 @@ ul.liste_3cols li.last{
   margin:0 2px;
 }
 .pagination li, .pagination li a{
-  color:#666; /* gris */
+  color:#666;
 }
 .pagination li a{
   text-decoration:underline;
@@ -1634,11 +1613,11 @@ ul.liste_3cols li.last{
 
 }
 .links_mea{
-  border-bottom:1px solid #000; /* noir */
+  border-bottom:1px solid #000;
   font-size:0.9em;
 }
 .links_mea li{
-  border-top:1px solid #000; /* noir */
+  border-top:1px solid #000;
   padding:2px 3px;
   /* contexte de formatage */
   overflow:hidden;
@@ -1649,7 +1628,7 @@ ul.liste_3cols li.last{
   float:left;
   margin-right:5px;
 }
-.links_mea ul{ /* lot2 */
+.links_mea ul{
   margin:0;
   padding:0;
   /* contexte de formatage */
@@ -1687,18 +1666,18 @@ ul.liste_3cols li.last{
 .links{
   color:#DE9C00; /* moutarde */
 }
-.links a, .adherents .links a{ /* lot2 :update */
+.links a, .adherents .links a{
   color:#DE9C00; /* moutarde */
   text-decoration:none;
 }
 .links span.type2, .links span.type2 a{
-  color:#666 !important; /* gris foncé */
+  color:#666 !important;
 }
 .links a:hover{
   text-decoration:underline;
 }
 .blk_footer .links, .blk_footer .links a{
-  color:#666; /* gris foncé */
+  color:#666;
 }
 /* links_lines */
 .links_lines, .links_lines li{
@@ -1711,11 +1690,11 @@ ul.liste_3cols li.last{
   background:#ccc; /* gris clair */
   padding:2px 0 2px 15px;
   _height:0; /* haslayout IE */
-  color:#000; /* noir */
+  color:#000;
   text-decoration:none;
 }
 .links_lines a{
-  color:#000; /* noir */
+  color:#000;
   text-decoration:none;
 }
 .links_lines a:hover{
@@ -1758,7 +1737,7 @@ ul.liste_3cols li.last{
   font-family:Arial, Verdana
 }
 .tags a{
-  color:#666; /* gris */
+  color:#666;
   font-weight:bold;
   text-decoration:none
 }
@@ -1895,7 +1874,7 @@ color:#DA9914 !important;
   display:block;
   font-weight:bold;
   background-position:right top;
-  color:#FFF; /* blanc */
+  color:#FFF;
   !width:1%;
   !white-space:nowrap;
 }
@@ -1912,7 +1891,7 @@ color:#DA9914 !important;
 * Conteneurs de blocks  :Definissent les lignes qui peuvent contenir plusieurs blocks
 *****************/
 /* ici on défini les lignes qui contiennent les blocks, sachant que le dernier block d'une ligne porte la classe block_last */
-.line_3cols, .line_3cols_mea, .line_2cols, .line_2cols_mea, .line_2cols_FM { /* lot 3 : update */
+.line_3cols, .line_3cols_mea, .line_2cols, .line_2cols_mea, .line_2cols_FM {
   overflow:hidden;
   _overflow:visible;
   _height:1%
@@ -1950,26 +1929,26 @@ color:#DA9914 !important;
 .size_2on3{width:66% !important}
 
 /* line_2col_mea :conteneur ligne où les blocs n'ont pas de bords arrondis vers l'intérieure */
-.line_2cols_mea .block .blk_header span, .line_3cols_mea .block_first .blk_header span, .line_3cols_mea .block_middle .blk_header span, .line_2cols_mea .block .blk_header a, .line_3cols_mea .block_first .blk_header a, .line_3cols_mea .block_middle .blk_header a{ /* lot 3 : update */
+.line_2cols_mea .block .blk_header span, .line_3cols_mea .block_first .blk_header span, .line_3cols_mea .block_middle .blk_header span, .line_2cols_mea .block .blk_header a, .line_3cols_mea .block_first .blk_header a, .line_3cols_mea .block_middle .blk_header a{
 background-position: -50px 0;
 }
-.line_2cols_mea .block_last .blk_header, .line_3cols_mea .block_middle .blk_header, .line_3cols_mea .block_last .blk_header{/* lot 3 : update */
+.line_2cols_mea .block_last .blk_header, .line_3cols_mea .block_middle .blk_header, .line_3cols_mea .block_last .blk_header{
 background-position: -50px 0;
 }
-.line_2cols_mea .block_last .blk_header span, .line_2cols_mea .block_last .blk_header a{ /* lot 3 : update */
+.line_2cols_mea .block_last .blk_header span, .line_2cols_mea .block_last .blk_header a{
 background-position: right top;
 }
 
 /****************
 * inside_block :block à l'intérieure d'un block
 *******************/
-.inside_block{ /* lot2 */
+.inside_block{
   position:relative;
   zoom:1; /* ie bug fix */
   background-color:#EAEAEA; /* gris clair */
 }
 /* inside_block_corners*/
-#tarif1 span.tl, .inside_block .tl, .inside_block .tr, .inside_block .bl, .inside_block .br{ /* lot2 */
+#tarif1 span.tl, .inside_block .tl, .inside_block .tr, .inside_block .bl, .inside_block .br{
   background-image:url(inside_block_corners.gif);
 }
 /*****************
@@ -2178,18 +2157,18 @@ background-position: right top;
   background-color:#FFF;
 }
 .block .filled_black{
-  background-color:#000; /* noir */
-  color:#FFF; /* blanc */
+  background-color:#000;
+  color:#FFF;
 }
 .block .filled_black .blk_footer .links, .block .filled_black .blk_footer .links a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block .filled_black a, .block .filled_black .links{
   color:#ccc; /* gris clair */
 }
 .block .filled_blanc{
-  background-color:#FFF; /* blanc */
-  color:#000; /* noir */
+  background-color:#FFF;
+  color:#000;
 }
 .block .filled_blanc a, .block .filled_blanc .links{
   color:#666; /* gris fonce */
@@ -2233,7 +2212,7 @@ background-position: right top;
 /* ========  mise_en_avant ========= */
 .mise_en_avant .blk_header, .mise_en_avant .blk_header span, .mise_en_avant .blk_header a{
   background-image:url(mise_en_avant_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
   margin:0;
 }
 .mise_en_avant .blk_header span img.universe {
@@ -2273,7 +2252,7 @@ background-position: right top;
   overflow:visible;
 }
 .mise_en_avant .produit, .mise_en_avant .produit dt, .mise_en_avant .produit dt a{
-  color:#000; /* noir */
+  color:#000;
 }
 .produit dt, .produit dd{/* supression de mise_en_avant pour deprioriser */
   padding-left:10px;
@@ -2285,11 +2264,11 @@ background-position: right top;
 }
 .mise_en_avant .produit dd.img{
   padding:0;
-  background:#FFF; /* blanc */
+  background:#FFF;
   border:1px solid #F3F3F3;
 }
 .mise_en_avant .sep{
-  border-bottom-color:#FFF; /* blanc */
+  border-bottom-color:#FFF;
 }
 .brd_noir .tl, .brd_noir .tr, .brd_noir .bl, .brd_noir .br{
   background-image:url(corner_noir_gris.png)!important;
@@ -2326,7 +2305,7 @@ background-position: right top;
 .IS_IE .cadre_produit .bl, .IS_IE .cadre_produit .br{
   _bottom:expression(cssBottom(this,true)) /* corrige le positionnement absolu sous IE */
 }
-/*2009-04-27*/
+
 .cadre_produit .number span{
   float:left;
   width:18px;
@@ -2334,7 +2313,6 @@ background-position: right top;
   margin-right:0;
 }
 .cadre_produit .img{
-  /*height:80px;*/
   margin:-5px 0pt 0pt;
   overflow:hidden;
   width:63px;
@@ -2359,25 +2337,25 @@ background-position: right top;
 }
 
 /*separator gris*/
-.sep, .sep_gris {border-bottom: 1px solid #000; /* noir */margin: 0;}
+.sep, .sep_gris {border-bottom: 1px solid #000;margin: 0;}
 .blk_content .sep, .blk_content .sep_gris {margin: 10px 0}
-   .sep_gris {border-bottom-color: #ccc; /* gris */}
+   .sep_gris {border-bottom-color: #ccc;}
 
 
 /* ======= block_rouge =======*/
 .block_rouge .blk_header, .block_rouge .blk_header span, .block_rouge .blk_header a{
-  background-color:#d00; /* rouge */
+  background-color:#d00;
   background-image:url(block_rouge_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_rouge_mea .blk_header, .block_rouge_mea .blk_header span, .block_rouge_mea .blk_header a{
-  background-color:#FFF; /* blanc */
+  background-color:#FFF;
   background-image:url(block_rouge_mea_header.png);
 }
 .block_rouge .blk_inside{
-  border-left:1px solid #d00; /* rouge */
-  border-bottom:1px solid #d00; /* rouge */
-  border-right:1px solid #d00; /* rouge */
+  border-left:1px solid #d00;
+  border-bottom:1px solid #d00;
+  border-right:1px solid #d00;
 }
 .block_rouge .filled{
   background:#FCE5E5; /* rouge clair */
@@ -2394,18 +2372,18 @@ background-image:url(block_rouge_corner_trans.png);
 /* produit */
 .block_rouge .produit .number, .block_rouge .produit .number span{
   background-image:url(block_rouge_number_corners.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_rouge h4, .block_rouge .filled .produit dt, .block_rouge .filled .produit dt a{
-  color:#d00; /* rouge */
+  color:#d00;
   font-weight:bold;
 }
 .block_rouge .produit dt, .block_rouge .produit dt a{
-  color:#000; /* noir */
+  color:#000;
   font-weight:bold;
 }
 .block_rouge .produit .details, .block_rouge .produit .details a{
-  color:#666; /* gris */
+  color:#666;
   font-weight:normal;
 }
 /* mise en avant mea */
@@ -2414,44 +2392,44 @@ background-image:url(block_rouge_corner_trans.png);
   color:#d00;
 }
 .block_rouge_mea .produit .details, .block_rouge_mea .produit .details a{
-  color:#666; /* noir */
+  color:#666;
   font-weight:normal;
 }
 /* mise en avant mea */
 .block_rouge .filled .produit .details{
-  color:#666; /* gris */
+  color:#666;
   font-weight:normal;
 }
 .block_rouge .blk_footer .links, .block_rouge .blk_footer .links a{
-  color:#d00; /* rouge */
+  color:#d00;
 }
 .block_rouge_mea .blk_footer .links, .block_rouge_mea .blk_footer .links a{
-  color:#666; /* rouge */
+  color:#666;
 }
 .block_rouge .blk_footer .links_lines li{
-  color:#FFF; /* blanc */
-  background:#d00; /* rouge */
+  color:#FFF;
+  background:#d00;
 }
 .block_rouge .blk_footer .links_lines a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_rouge .bkg_ft{
-  background:#d00; /* rouge */
+  background:#d00;
 }
 .block_rouge .bkg_ft a, .block_rouge .bkg_ft .links a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_rouge .sep, .block_rouge .listeproduits li{
   border-bottom-color:#ccc; /* gris clair */
 }
 .block_rouge .filled .sep{
-  border-bottom-color:#E94D4D; /* rouge */
+  border-bottom-color:#E94D4D;
 }
 .block_rouge .listeproduits li{
-  border-bottom-color:#d00; /* rouge */
+  border-bottom-color:#d00;
 }
 .block_rouge_mea .sep{
-  border-bottom-color:#FFF; /* blanc */
+  border-bottom-color:#FFF;
 }
 
 /*Ajout test 2009-04-27*/
@@ -2476,37 +2454,37 @@ background-image:url(block_rouge_corner_trans.png);
 
 /******* block_jaune *******/
 .block_jaune .blk_header, .block_jaune .blk_header span, .block_jaune .blk_header a{
-  background-color:#F9D500; /* jaune */
+  background-color:#F9D500;
   background-image:url(block_jaune_header_flat.png);
-  color:#000; /* noir */
+  color:#000;
 }
 .block_jaune_blanc .blk_header, .block_jaune_blanc .blk_header span, .block_jaune_blanc .blk_header a{
   background-image:url(block_jaune_blanc_header.png);
 }
 .block_jaune_mea .blk_header, .block_jaune_mea .blk_header span, .block_jaune_mea .blk_header a{
-  background-color:#FFF; /* blanc */
+  background-color:#FFF;
   background-image:url(block_jaune_mea_header.png);
 }
 .block_jaune .blk_inside{
-  border:1px solid #F9D500; /* jaune */
+  border:1px solid #F9D500;
 }
 .block_jaune .downBorder .block_content{
-  border:solid #F9D500; /* jaune */
+  border:solid #F9D500;
   border-width:0 1px;
 }
 .block_jaune .downBorder .block_footer{
-  border:solid #F9D500; /* jaune */
-  border-width:0 1px 1px 1px; /* jaune */
+  border:solid #F9D500;
+  border-width:0 1px 1px 1px;
 }
 .block_jaune .filled{
   background:#FEFBE5; /* jaune clair */
 }
 .block_jaune .blk_footer .links_lines li{
-  color:#000; /* noir */
-  background:#fbd93b; /* jaune */
+  color:#000;
+  background:#fbd93b;
 }
 .block_jaune .blk_footer .links_lines a{
-  color:#000; /* noir */
+  color:#000;
 }
 .block_jaune .produit dt{
   font-weight:bold;
@@ -2515,10 +2493,10 @@ background-image:url(block_rouge_corner_trans.png);
   border-color:#FEFBE5;
 }
 .block_jaune .produit dt, .block_jaune .produit dt a{
-  color:#000; /* noir */
+  color:#000;
 }
 .block_jaune .produit .details, .block_jaune .produit .details a{
-  color:#666; /* noir */
+  color:#666;
   font-weight:normal;
 }
 /* mise en avant mea */
@@ -2526,21 +2504,21 @@ background-image:url(block_rouge_corner_trans.png);
   font-weight:bold;
 }
 .block_jaune_mea .produit dt, .block_jaune_mea .produit dt a{
-  color:#000; /* noir */
+  color:#000;
 }
 .block_jaune_mea .produit .details, .block_jaune_mea .produit .details a{
-  color:#666; /* gris */
+  color:#666;
   font-weight:normal;
 }
 .block_jaune .sep{
-  border-bottom-color:#FBE24D; /* jaune */
+  border-bottom-color:#FBE24D;
 }
 .block_jaune .listeproduits li{
-  border-bottom-color:#FBE24D; /* jaune */
+  border-bottom-color:#FBE24D;
 }
 /* mise en avant mea */
 .block_jaune_mea .sep{
-  border-bottom-color:#FFF; /* blanc */
+  border-bottom-color:#FFF;
 }
 .block_jaune .cadre_produit .number, .block_noir .cadre_produit .number span {
 	background:#fff none repeat scroll 0% 50%;
@@ -2562,7 +2540,7 @@ background-image:url(block_cadre_prod_jaune_corner.png);
 .block_bleu .blk_header, .block_bleu .blk_header span, .block_bleu .blk_header a{
   background-color:#0099CC; /* bleu clair */
   background-image:url(block_bleu_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_bleu .blk_inside{
   border:1px solid #0099CC; /*  bleu clair */
@@ -2580,26 +2558,26 @@ background-image:url(block_cadre_prod_jaune_corner.png);
   border-color:#47B5DA; /* bleu clair */
 }
 .block_bleu .cadre_produit .img{
-  background:#FFF; /* blanc */
+  background:#FFF;
 }
 .block_bleu .produit .number, .block_bleu .produit .number span{
   background-image:url(block_bleu_number_corners.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_bleu .cadre_produit .number, .block_bleu .cadre_produit .number span{
   background-image:none;
   background:#43B4D9;
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_bleu .blk_footer .links, .block_bleu .blk_footer .links a{
   color:#0099CC; /* */
 }
 .block_bleu .blk_footer .links_lines li{
-  color:#FFF; /* blanc */
+  color:#FFF;
   background:#0099CC; /* bleu clair */
 }
 .block_bleu .blk_footer .links_lines a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_bleu h4, .block_bleu .produit dt, .block_bleu .produit dt a{
   color:#0099CC; /* bleu clair */
@@ -2608,19 +2586,19 @@ background-image:url(block_cadre_prod_jaune_corner.png);
   border-bottom-color:#09C; /* bleu clair */
 }
 .block_bleu .filled .sep, .block_bleu .filled .listeproduits li{
-  border-bottom-color:#47B5DA; /* blanc */
+  border-bottom-color:#47B5DA;
 }
 .block_bleu_mea .filled .sep{
-  border-bottom-color:#FFF; /* blanc */
+  border-bottom-color:#FFF;
 }
 /* ======= block_orange ======= */
 .block_orange .blk_header, .block_orange .blk_header span, .block_orange .blk_header a{
   background-color:#FE7403; /* orange */
   background-image:url(block_orange_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_orange_mea .blk_header, .block_orange_mea .blk_header span, .block_orange_mea .blk_header a{
-  background-color:#FFF; /* blanc */
+  background-color:#FFF;
   background-image:url(block_orange_mea_header.png);
 }
 .block_orange .blk_footer .links, .block_orange .blk_footer .links a{
@@ -2630,17 +2608,17 @@ background-image:url(block_cadre_prod_jaune_corner.png);
   color:#666; /* orange */
 }
 .block_orange .blk_footer .links_lines li{
-  color:#FFF; /* blanc */
+  color:#FFF;
   background:#FE7403; /* orange */
 }
 .block_orange .blk_footer .links_lines a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_orange .bkg_ft{
   background:#FE7403; /* orange */
 }
 .block_orange .bkg_ft a, .block_orange .bkg_ft .links a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_orange  h4, .block_orange .produit dt, .block_orange .produit dt a{
   color:#FF6600; /* orange */
@@ -2655,10 +2633,10 @@ background-image:url(block_cadre_prod_jaune_corner.png);
   border-bottom-color:#FE9B49; /* orange */
 }
 .block_orange .filled .sep, .block_orange .filled .listeproduits li{
-  border-bottom-color:#FE9B49; /* blanc */
+  border-bottom-color:#FE9B49;
 }
 .block_orange_mea .sep{
-  border-bottom-color:#FFF; /* blanc */
+  border-bottom-color:#FFF;
 }
 .block_orange .cadre_produit .number, .block_noir .cadre_produit .number span {
 	background:#fff none repeat scroll 0% 50%;
@@ -2678,9 +2656,9 @@ background-image:url(block_cadre_prod_orange_corner.png);
 }
 /* ======= block_noir ======= */
 .block_noir .blk_header, .block_noir .blk_header span, .block_noir .blk_header a{
-  background-color:#000; /* noir */
+  background-color:#000;
   background-image:url(block_noir_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 #col_gauche .block_noir .blk_header, #col_gauche .block_noir .blk_header span, #col_gauche .block_noir .blk_header a, #col_droite .block_noir .blk_header, #col_droite .block_noir .blk_header span, #col_droite .block_noir .blk_header a{
   color:#DE9C00; /* moutarde */
@@ -2731,15 +2709,15 @@ background-image:url(block_cadre_prod_noir_corner.png);
   color:#666; /* gris fonce */
 }
 .block_noir .blk_footer .links_lines li{
-  color:#FFF; /* blanc */
-  background:#000; /* noir */
+  color:#FFF;
+  background:#000;
 }
 .block_noir .blk_footer .links_lines a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_noir .bkg_ft{
-  background:#000; /* noir */
-  color:#FFF; /* blanc */
+  background:#000;
+  color:#FFF;
 }
 .block_noir .sep, .block_noir .listeproduits li{
   border-bottom-color:#333; /* gris tres fonce */
@@ -2748,7 +2726,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   border-bottom-color:#333; /* gris tres fonce */
 }
 .block_noir .bkg_ft a, .block_noir .bkg_ft .links, .block_noir .bkg_ft .links a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_noir .sep{
   border-color:#F5F5F5; /* blanc fumé */
@@ -2757,16 +2735,16 @@ background-image:url(block_cadre_prod_noir_corner.png);
   border-color:#F5F5F5; /* blanc fumé */
 }
 .block_noir h4, .block_noir h4 a{
-  color:#000; /* noir */
+  color:#000;
   text-decoration:none;
 }
 .block_noir h4 cite{
-  color:#666; /* gris */
+  color:#666;
   font-style:normal;
   font-weight:normal;
 }
 .block_noir .filled_blanc h4 cite{
-  color:#000; /* gris */
+  color:#000;
 }
 .block_noir .links, .block_noir .links a{
   color:#666;
@@ -2794,7 +2772,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_gris .blk_header, .block_gris .blk_header span, .block_gris .blk_header a{
   background-color:#808080; /* gris foncé*/
   background-image:url(block_gris_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_gris_fonce {
   background:#bfbfbf; /* gris foncé*/
@@ -2809,22 +2787,22 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-image:url(block_gris_corners.png);
 }
 .block_gris .blk_inside{
-  border:1px solid #CCC; /* gris */
+  border:1px solid #CCC;
 }
 .block_gris .filled{
   background:#EAEAEA; /*gris clair */
 }
 .block_gris .sep, .block_gris .listeproduits li{
-  border-color:#CCC; /* gris */
+  border-color:#CCC;
 }
 .block_gris .filled .sep, .block_gris .filled .listeproduits li{
-  border-color:#FFF; /* blanc */
+  border-color:#FFF;
 }
 .block_gris ,.block_gris p a{
-  color:#808080; /* noir */
+  color:#808080;
 }
 .block_gris .inside_block{
-  background:#FFF; /* blanc */
+  background:#FFF;
 }
 .block_gris .inside_block .tl, .block_gris .inside_block .tr, .block_gris .inside_block .bl, .block_gris .inside_block .br{
   background-image:url(block_gris_inside_corners.gif);
@@ -2837,7 +2815,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 }
 /* ======= block_moutarde ======= */
 .block_moutarde .blk_header, .block_moutarde .blk_header span, .block_moutarde .blk_header a{
-  color:#FFF; /* blanc */
+  color:#FFF;
   background-color:#DE9C00; /* moutarde */
   background-image:url(block_moutarde_header.png);
 }
@@ -2854,20 +2832,20 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-image:url(mise_en_avant_corners.png);
 }
 .block_moutarde .bkg_ft{
-  color:#FFF; /* blanc */
+  color:#FFF;
   background:#DE9C00; /* moutarde */
 }
 .block_moutarde .bkg_ft .links, .block_moutarde .bkg_ft .links a{
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_moutarde .blk_inside{
-  border:1px solid #CCC; /* gris */
+  border:1px solid #CCC;
 }
 .block_moutarde .filled{
-  background:#F0F0F0; /* gris */
+  background:#F0F0F0;
 }
 .block_moutarde a{
-  color:#666; /* gris */
+  color:#666;
 }
 /*classe tetiere directe pour tableaux*/
 .tl_moutarde{ /*placer ds th de gauche*/
@@ -2882,28 +2860,28 @@ background-image:url(block_cadre_prod_noir_corner.png);
 
 /* ======= block_blanc ======= */
 .block_blanc .blk_header, .block_blanc .blk_header span, .block_blanc .blk_header a{
-  color:#666; /* gris */
-  background-color:#FFF; /* blanc */
+  color:#666;
+  background-color:#FFF;
 }
 .block_blanc .tl, .block_blanc .tr, .block_blanc .bl, .block_blanc .br{
   background-image:url(block_blanc_corners.png);
 }
 .block_blanc .bkg_ft{
-  color:#666; /* gris */
-  background:#FFF; /* blanc */
+  color:#666;
+  background:#FFF;
 }
 .block_blanc .bkg_ft .links, .block_blanc .bkg_ft .links a{
-  color:#666; /* gris */
+  color:#666;
 }
 .block_blanc .blk_inside{
-  border:1px solid #CCC; /* gris */
+  border:1px solid #CCC;
 }
 .block_blanc .filled{
-  background:#FFF; /* gris */
+  background:#FFF;
 }
 /* ======= block_vert ======= */
 .block_vert .blk_header, .block_vert .blk_header span, .block_vert .blk_header a{
-  color:#FFF; /* blanc */
+  color:#FFF;
   background-color:#008B7C; /* vert */
   background-image:url(block_vert_header.png);
 }
@@ -2911,17 +2889,17 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-image:url(block_gris_corners.png);
 }
 .block_vert .bkg_ft{
-  color:#666; /* gris */
-  background:#FFF; /* blanc */
+  color:#666;
+  background:#FFF;
 }
 .block_vert .bkg_ft .links, .block_vert .bkg_ft .links a{
-  color:#666; /* gris */
+  color:#666;
 }
 .block_vert .blk_inside{
-  border:1px solid #CCC; /* gris */
+  border:1px solid #CCC;
 }
 .block_vert .filled{
-  background:#FFF; /* gris */
+  background:#FFF;
 }
 
 /* ======= block_vertMic  =======*/
@@ -2977,7 +2955,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   background-image:url(block_gris_corners.png);
 }
 .block_bleu_mp .blk_inside{
-  border:1px solid #CCC; /* gris */
+  border:1px solid #CCC;
 }
 
 /* ======= block_espace-fg (fnac gaming: violet - mauve) =======*/
@@ -2985,7 +2963,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .block_espace-fg .blk_header, .block_espace-fg .blk_header span{
   background-color:#543E7F; 
   background-image:url(block_espace-fg_header.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
   font-size:12px;
   text-align:left;
 }
@@ -3136,7 +3114,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   min-width:546px;
   width:45.5em;
   margin:0 0 10px 0;
-  color:#000; /* noir */
+  color:#000;
   /* contexte de formatage */
   overflow:hidden;
   _overflow:visible;
@@ -3196,7 +3174,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   color:#FFF; /*  blanc */
 }
 .search_results .blk_header ul li a, .search_results .blk_footer ul li a{
-  color:#FFF; /* blanc */
+  color:#FFF;
   text-decoration:underline;
 }
 .search_results .blk_header ul li.current, .search_results .blk_footer ul li.current{
@@ -3215,7 +3193,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .search_results .blk_content table td{
   padding:10px 0;
   vertical-align:top;
-  border-bottom:1px solid #ebebeb; /* gris */
+  border-bottom:1px solid #ebebeb;
 }
 .search_results .blk_content table tr.last td{
   border:none;
@@ -3252,7 +3230,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   margin-top:10px;
 }
 .search_results .blk_content .produit dt, .search_results .blk_content .produit dt a, .search_results .blk_content .produit .details{
-  color:#000; /* noIr */
+  color:#000;
 }
 /* ======== bloc espace_adherent ===== */
 .espace_adherent .blk_header span, .espace_adherent .blk_header a{
@@ -3271,10 +3249,10 @@ background-image:url(block_cadre_prod_noir_corner.png);
 .espace_adherent .points{
   padding:10px 5px;
   margin:0;
-  color:#F9D500; /* jaune */
+  color:#F9D500;
   text-align:center;
   font-size:1.1em;
-  background:#000; /* noir */
+  background:#000;
 }
 .espace_adherent .points strong{
   font-size:1.4em;
@@ -3286,7 +3264,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
   margin:5px 0;
 }
 .espace_adherent .links a{
-  color:#000; /* noir */
+  color:#000;
 }
 /* ===== fix CSS classes ===== */
 .hidecorners .bl, .hidecorners .br{
@@ -3308,7 +3286,7 @@ background-image:url(block_cadre_prod_noir_corner.png);
 }
 .block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
   background-image:url(block_adherents_header_adh.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_adherent .sub_header, .block_adherent .sub_header a {
   background:#000;
@@ -3318,14 +3296,14 @@ background-image:url(block_cadre_prod_noir_corner.png);
 
 .line_2cols .block_adherent .blk_header, .block_adherent .blk_header span, .block_adherent .blk_header a{
   background-image:url(block_adherents_header_2cols_adh.png);
-  color:#FFF; /* blanc */
+  color:#FFF;
 }
 .block_adherent .blk_content{
-  background:#FFF; /* lot2 */
+  background:#FFF;
 }
 .block_adherent .links_lines li{
   background:#000; /* gris clair */
-  color:#FFF; /* noir */
+  color:#FFF;
 }
 .block_adherent .links_lines li a{
   color:#FFF;
@@ -3346,7 +3324,6 @@ background-image:url(block_cadre_prod_noir_corner.png);
 /*************
 * affiliation
 *************/
-
 
 .block_affilies{
   background-color:#E3B22F;
@@ -3505,10 +3482,10 @@ background-image:url(block_cadre_prod_noir_corner.png);
   display:block;
 }
 .concoursFnac li, .concoursFnac p{
-  color:#000; /* noir */
+  color:#000;
 }
 .concoursFnac li.activ label{
-  color:#555; /* noir */
+  color:#555;
 }
 .concoursFnac li *{
   vertical-align:middle;
@@ -3782,17 +3759,17 @@ hr.white {
 }
 #navigation.menumoutarde dl{
   background:#e5b033; /* moutarde clair*/
-  color:#000; /* noir */
+  color:#000;
   border:1px solid #DE9C00; /* moutarde */
   border-width:0 1px;
-  padding:0 12px; /*lot2 :update */
+  padding:0 12px;
 }
 #navigation.menuframboise .header, #navigation.menuframboise .header .topleft, #navigation.menuframboise .header h2, #navigation.menuframboise .bottom, #navigation.menuframboise .bottom div{
   background-image:url(navn2_background_menuframboise.png); /*menu gauche voyages*/
 }
 #navigation.menuframboise dl{
   background:#EFBECE; /* framboise delavee*/
-  color:#000; /* noir */
+  color:#000;
   border:1px solid #B12C55; /* framboise */
   border-width:0 1px;
   padding:0 12px; 
@@ -3808,7 +3785,7 @@ hr.white {
   padding:2px 0;
 }
 #navigation.menumoutarde dl a, #navigation.menuframboise dl a{
-  color:#000 /* noir */
+  color:#000
 }
 
 
@@ -3973,7 +3950,7 @@ body.popUpCredit #content{
 .popin h3{
   font-size:1.2em;
 }
-/* gris */
+
 .popin .popin_grise{
   background:#EBEBEB;
   color:#666;
@@ -3982,7 +3959,7 @@ body.popUpCredit #content{
 .popin_grise .close a{
   color:#000;
 }
-/* noir */
+
 .popin .popin_noir{
   background:#000;
   color:#666;
@@ -3991,7 +3968,7 @@ body.popUpCredit #content{
 .popin_noir .close a{
   color:#FFF;
 }
-/* blanc */
+
 .popin .popin_blanc{
   background:#FFF;
   color:#000;
@@ -4159,7 +4136,6 @@ body.popUpCredit #content{
 .cperso_btm {background-image:url(myfnac_logo.jpg);background-repeat:no-repeat;background-position:right 0;height:50px;margin:0;padding:20px 0 0 0}
 .cperso_btm ul {padding:0;margin:0}
 .cperso_btm li {padding:0;list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;}
-/* *** */
 
 /* lien compteur vente flash */
 #smartAff,.smartAff_lien,.smartAff_lien a {
@@ -4388,7 +4364,7 @@ ul.enf_vignette li.link_1 a {font-weight:bold}
 ul.enf_vignette li.link_2,ul.enf_vignette li.link_2 a {color:#CC0104}
 
 #mea_enf .blk_footer .links .grey, #mea_enf .blk_footer .links .grey a{
-  color:#666; /* gris foncé */
+  color:#666;
 }
 
 /** cdc_2010.css **/
