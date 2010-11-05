@@ -1,2 +1,13 @@
-# [EN] perhaps you should use this file.. :)
-# [FR] vous devriez peut être utiliser ce fichier!
+ServerSignature Off
+
+<FilesMatch "\.(ico|flv|swf|jpg|jpeg|png|gif|css|js)$">
+Header unset Last-Modified
+Header set Cache-Control "public"
+ExpiresActive On
+ExpiresDefault "access plus 1 years"
+# Seems the server uses ExpireByType so it needs to be used here too
+ExpiresByType image/gif "access plus 1 years"
+ExpiresByType image/png "access plus 1 years"
+ExpiresByType image/jpg "access plus 1 years"
+ExpiresByType image/x-icon "access plus 1 years"
+</FilesMatch>
