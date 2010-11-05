@@ -384,7 +384,17 @@
 						<div id="HeaderBasket">
 							<div id="monPanier">
 								<div id="cartouche">
-									<p class="clearfix"><a href="enfants.asp.html#" onclick="$('div#detailPanier').slideToggle(500);return false;" rel="noFollow"><img src="ico-panier.png" alt="Panier" class="panier"></a> <span class="recapPanier"><a href="enfants.asp.html#" onclick="$('div#detailPanier').slideToggle(500);return false;" rel="noFollow">Mon panier</a></span> <span class="switch" onclick="$('#detailPanier').slideToggle(500);return false;">.</span></p>
+									<p class="clearfix">
+										<a href="enfants.asp.html#" onclick="$('div#detailPanier').slideToggle(500);return false;" rel="noFollow">
+											<img src="ico-panier.png" alt="Panier" class="panier" />
+										</a>
+										<span class="recapPanier">
+											<a href="enfants.asp.html#" onclick="$('div#detailPanier').slideToggle(500);return false;" rel="noFollow">Mon panier</a>
+										</span>
+
+										<span class="totArticles"></span>
+										<span class="switch" onclick="$('#detailPanier').slideToggle(500);return false;" >.</span>
+									</p>
 								</div><!-- /fin/#cartouche -->
 
 								<div id="rideau">
@@ -1234,7 +1244,7 @@
 							<h1 id="titres"><img alt="Enfants" src="vignette_enfants.png"></h1>
 
 							<div id="navigation" class="mrg_b_shadw_big">
-								<div class="header"></div>
+								<div class="header"><h1></h1></div>
 
 								<div class="blkGris pdg_b">
 									<div class="inside_block">
