@@ -5,31 +5,6 @@
  * Documentation: http://docs.jquery.com/AjaxQueue
  */
 
-/**
-
-<script>
-$(function(){
-	jQuery.ajaxQueue({
-		url: "test.php",
-		success: function(html){ jQuery("ul").append(html); }
-	});
-	jQuery.ajaxQueue({
-		url: "test.php",
-		success: function(html){ jQuery("ul").append(html); }
-	});
-	jQuery.ajaxSync({
-		url: "test.php",
-		success: function(html){ jQuery("ul").append("<b>"+html+"</b>"); }
-	});
-	jQuery.ajaxSync({
-		url: "test.php",
-		success: function(html){ jQuery("ul").append("<b>"+html+"</b>"); }
-	});
-});
-</script>
-<ul style="position: absolute; top: 5px; right: 5px;"></ul>
-
- */
 /*
  * Queued Ajax requests.
  * A new Ajax request won't be started until the previous queued 
@@ -45,19 +20,18 @@ $(function(){
 
 
 (function($) {
-	
-	var ajax = $.ajax;
-	
-	var pendingRequests = {};
-	
-	var synced = [];
-	var syncedData = [];
+	var ajax = $.ajax
+		,pendingRequests = {}
+		,synced = []
+		,syncedData = [];
 	
 	$.ajax = function(settings) {
 		// create settings for compatibility with ajaxSetup
 		settings = jQuery.extend(settings, jQuery.extend({}, jQuery.ajaxSettings, settings));
 		
-		var port = settings.port;
+		var port = settings.port
+			,_old
+			,pos;
 		
 		switch(settings.mode) {
 		case "abort": 
@@ -66,7 +40,7 @@ $(function(){
 			}
 			return pendingRequests[port] = ajax.apply(this, arguments);
 		case "queue": 
-			var _old = settings.complete;
+			_old = settings.complete;
 			settings.complete = function(){
 				if ( _old )
 					_old.apply( this, arguments );
@@ -78,7 +52,7 @@ $(function(){
 			});
 			return;
 		case "sync":
-			var pos = synced.length;
+			pos = synced.length;
 	
 			synced[ pos ] = {
 				error: settings.error,
