@@ -19,7 +19,7 @@ else if (IS_IE7)
 
 function getElementsByClassName(oElm, sTagName, sClassName) {
   var aElements = (sTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(sTagName);
-  var aReturnElements = new Array();
+  var aReturnElements = [];
   sClassName = sClassName.replace(/\-/g, "\\-");
   var oRegExp = new RegExp("(^|\\s)" + sClassName + "(\\s|$)");
   var oElement;
@@ -29,17 +29,17 @@ function getElementsByClassName(oElm, sTagName, sClassName) {
     if(oRegExp.test(oElement.className))
     aReturnElements.push(oElement);
   }
-  return aReturnElements
+  return aReturnElements;
 }
 
 function findPos(obj){
     var curleft = curtop = 0;
     if (obj.offsetParent) {
-        curleft = obj.offsetLeft
-        curtop = obj.offsetTop
+        curleft = obj.offsetLeft;
+        curtop = obj.offsetTop;
         while (obj = obj.offsetParent) {
-            curleft += obj.offsetLeft
-            curtop += obj.offsetTop
+            curleft += obj.offsetLeft;
+            curtop += obj.offsetTop;
         }
     }
     return [curleft, curtop];
@@ -614,101 +614,6 @@ function fixListe2cols(){
     }
 }
 
-
-/*
- * Fin alignement en hauteur
- */
-
-/*
- * domLoad et onload fonctions
- * Ces fonctions permettent de lancer des fonctions en 2 temps
- * - Soit pendant le chargement de la page (mais le DOM est construit)
- * - Soit une fois que la page est construite
- */
-var domLoaded = false;
-var domMustLaunch = false;
-var domLoadFunctionLaunched = false;
-var domLoadTimer = null;
-var domLoadArrFunctions = [];
-var onloadArrFunctions = [];
-
-/*
- *	domLoad() :
- *	Appartient a un ensemble de fonctions qui sont lancees pendant le chargement de la page, une fois le DOM construit
- *	Cette fonction attend que le dom soit totalement construit
- */
-function domLoad(){
-    if (document.getElementById("footer")) {
-        domLoadCaller();
-    } else {
-        domLoadTimer = setTimeout("domLoad()", 10);
-    }
-}
-
-domLoad();
-
-/*
- *	domLoadCaller() :
- *	Appartient a un ensemble de fonctions qui sont lancees pendant le chargement de la page, une fois le DOM construit
- *	Cette fonction gere le lancement de la fonction finale domLoadFunctions();
- *	domLoadCaller() lances les fonctions contenues dans un array de fonctions et gere le fait que domLoad doit etre lance avant le onload
- */
-function domLoadCaller(){
-    domLoadFunctionLaunched = true;
-    for (var i = 0; i < domLoadArrFunctions.length; i++) {
-        domLoadArrFunctions[i]();
-    }
-    domLoadFunctions();
-    domLoaded = true;
-    if (domMustLaunch) {
-        onloadCaller();
-    }
-}
-
-/*
- *	onloadCaller() : // ne pas modifier cette fonction
- *	Cette fonction gere le lancement de la fonction finale onLoadFunctions();
- *	onLoadCaller() est executee une fois que la page est chargee.
- */
-function onloadCaller(){
-    clearTimeout(domLoadTimer);
-    if (!domLoadFunctionLaunched) {
-        domLoadCaller();
-    }
-    if (!domLoaded) {
-        domMustLaunch = true;
-        return;
-    }
-    for (var i = 0; i < domLoadArrFunctions.length; i++) {
-        onloadArrFunctions[i]();
-    }
-    onloadFunctions();
-}
-
-/*
- * Executions des fonctions au chargement de la page
- */
-/* domLoadFunctions() :
- *  Cette fonction est lancée pendant le chargement de la page, une fois que le DOM est completement construit
- */
-function domLoadFunctions(){
-    getAllBlocks(); //parsing de tous les blocks et mise ne place dans des hashmaps
-    fixAligneProduits(); //alignement des contenus de produits
-    getAllLists(); // parsing de toutes les listes produits ou contacts
-}
-
-/* onloadFunctions():
- *	cette fonction est lancee une fois que la page est totalement chargee (images, flash, fichiers associes)
- */
-function onloadFunctions(){
-    fixMiseEnAvant(); //alignement des contenus de mise en avant
-    fixListeInline(); //aligne les items des listes en ligne
-    fixListe2cols(); //aligne les items des listes en 2 colonnes
-    fixBlocksHeight(); //alignement des blocs
-    fixCorners(); //correction des coins (seulement pour IE et si besoin pour anciennes version des autres navigateurs)
-    fixAddressBlock();
-	
-}
 var fnacFlag = 0;
 var fnacTimer;
 
@@ -895,15 +800,7 @@ function Onplay(flag) {
 		catch (e) {}
 	}
 }
-//Back when adding to the player
 
-function OnItemAdded(ids) {
-
-}
-
-function PlayThisMedia(eventArgs, who) {
-	Onplay();
-}
 //----//
 //	Navigation management
 //----//
@@ -965,7 +862,15 @@ function SetPlayerCookie(name, value, expires) {
 
 //on lance la fonction onloadCaller une fois la page chargee.
 $(function(){
-    onloadCaller();
+    getAllBlocks(); //parsing of all the blocks and put up only in HashMap
+	fixAligneProduits(); //alignment of the contents of products
+	getAllLists(); // parsing of all lists products and contacts
+    fixMiseEnAvant(); //alignment of content highlighted
+	fixListeInline(); //aligns the items lists online
+	fixListe2cols(); //aligns the items list in 2 columns
+	fixBlocksHeight(); //alignment blocks
+	fixCorners(); //Correction of corners (only for IE and if necessary for older versions of other browsers)
+	fixAddressBlock();
 
 	//ce script va sauter avec la sortie du moteur de recherche v3
 	function ChangeContext() {
@@ -1081,3 +986,5 @@ $(function(){
 		});
 	});
 });
+
+var s_account="fnaccomprod";
